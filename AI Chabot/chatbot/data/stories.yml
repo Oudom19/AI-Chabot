@@ -1,0 +1,179 @@
+version: "3.1"
+
+stories:
+- story: start interaction
+  steps:
+    - intent: start
+    - action: utter_start
+
+- story: Greet first and then deny
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: deny
+  - action: utter_goodbye
+
+- story: user asks who are you
+  steps:
+    - intent: ask_who_are_you
+    - action: utter_who_are_you
+
+- story: user asks who developed you
+  steps:
+    - intent: ask_who_develop_you
+    - action: utter_who_develop_you
+
+#Story list
+- story: List the brand and category and continue
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: affirm
+  - action: utter_ask_list
+  - intent: affirm
+  - action: action_list
+  - intent: affirm
+  - action: utter_ask_for_products
+
+
+- story: List the brand and category and stop, then ask for specific product
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: affirm
+  - action: utter_ask_list
+  - intent: affirm
+  - action: action_list
+  - intent: deny
+  - action: utter_ask_products
+  - intent: affirm
+  - action: utter_ask_for_products
+
+- story: List the brand and category and stop, then ask for specific product and deny
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: affirm
+  - action: utter_ask_list
+  - intent: affirm
+  - action: action_list
+  - intent: deny
+  - action: utter_ask_products
+  - intent: deny
+  - action: utter_goodbye
+
+- story: Deny after asked to show the list but not yet show the list
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: affirm
+  - action: utter_ask_list
+  - intent: deny
+  - action: utter_ask_products
+  - intent: deny
+  - action: utter_goodbye
+
+- story: List the brand and category
+  steps:
+  - intent: ask_list
+  - action: action_list
+
+#Story for Manufacturer
+- story: Ask to check the products by manufacturer continue
+  steps:
+  - intent: ask_manufacturer_products
+  - action: action_check_manufacturer
+  - intent: affirm
+  - action: utter_ask_for_products
+
+- story: Ask to check the products by manufacturer and deny
+  steps:
+  - intent: ask_manufacturer_products
+  - action: action_check_manufacturer
+  - intent: deny
+  - action: utter_goodbye
+
+#Story for Category
+- story: Ask to check the products by category continue
+  steps:
+  - intent: ask_category_products #place to change
+  - action: action_check_category
+  - intent: affirm
+  - action: utter_ask_for_products
+
+- story: Ask to check the products by category and deny
+  steps:
+  - intent: ask_category_products #place to change
+  - action: action_check_category
+  - intent: deny
+  - action: utter_goodbye
+
+#Story for Model
+- story: Ask to check the products by category continue
+  steps:
+  - intent: ask_model_name_details #place to change
+  - action: action_check_model
+  - intent: affirm
+  - action: utter_ask_for_products
+
+- story: Ask to check the products by category and deny
+  steps:
+  - intent: ask_model_name_details #place to change
+  - action: action_check_model
+  - intent: deny
+  - action: utter_goodbye
+
+#Story for manufacturer and category
+- story: Ask to check the products by category continue
+  steps:
+  - intent: ask_product_by_manufacturer_and_category #place to change
+  - action: action_check_manufacturer_category
+  - intent: affirm
+  - action: utter_ask_for_products
+
+- story: Ask to check the products by category and deny
+  steps:
+  - intent: ask_product_by_manufacturer_and_category #place to change
+  - action: action_check_manufacturer_category
+  - intent: deny
+  - action: utter_goodbye
+
+- story: user thanks
+  steps:
+    - intent: thank
+    - action: utter_thank
+
+- story: Fetch products info by name
+  steps:
+  - intent: ask_product_by_name
+  - action: action_fetch_product_by_name
+
+- story: Provide the price of the products
+  steps:
+  - intent: ask_product_price
+  - action: action_provide_product_price
+
+- story: Fetch products info by price
+  steps:
+    - intent: ask_product_exact_price
+    - action: action_fetch_product_at_exact_price
+
+    - intent: ask_product_above_price
+    - action: action_fetch_product_above_price
+
+    - intent: ask_product_below_price
+    - action: action_fetch_product_below_price
+
+    - intent: ask_product_between_prices
+    - action: action_fetch_product_between_prices
+
+- story: Fetch products info by category
+  steps:
+  - intent: ask_product_by_category
+  - action: action_fetch_product_by_category
+
+- story: Fetch products info by manufacturer
+  steps:
+  - intent: ask_product_by_manufacturer
+  - action: action_fetch_product_by_manufacturer
+

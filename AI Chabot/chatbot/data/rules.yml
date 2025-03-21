@@ -1,0 +1,37 @@
+version: "3.1"
+
+rules:
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_who_are_you
+
+# PUBLIC
+- rule: respond to who are you
+  steps:
+    - intent: ask_who_are_you
+    - action: utter_who_are_you
+
+- rule: respond to who developed you
+  steps:
+    - intent: ask_who_develop_you
+    - action: utter_who_develop_you
+
+- rule: respond with thank from the user
+  steps:
+    - intent: thank
+    - action: utter_thank
+
+- rule: Check Manufacturer and Category
+  condition:
+    - slot_was_set:
+        - manufacturer
+    - slot_was_set:
+        - category
+  steps:
+    - action: action_check_manufacturer_category

@@ -1,0 +1,806 @@
+version: "3.1"
+
+nlu:
+- intent: start
+  examples: |
+    - /start
+    - Start the bot
+    - Hello, start
+    - Can you begin the conversation?
+
+- intent: greet
+  examples: |
+    - yoo
+    - yo
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+    - hey
+    - what's up
+    - howdy
+    - greetings
+    - hi there
+    - hello there
+    - nice to meet you
+    - pleasure to meet you
+    - yo
+    - hiya
+    - morning
+    - afternoon
+    - evening
+    - hey how are you
+    - hi how are you doing
+    - hello there how are you
+    - sup
+    - hey ya
+    - hi folks
+    - good day
+    - hola
+    - bonjour
+    - ciao
+    - greetings and salutations
+    - anyone there?
+    - anyone available?
+    - is someone there?
+    - I need assistance
+    - can someone help me?
+    - looking for help
+    - need some help please
+    - just browsing
+    - first time here
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+    - bye
+    - goodbye
+    - see you later
+    - see you soon
+    - have a nice day
+    - take care
+    - until next time
+    - bye bye
+    - farewell
+    - catch you later
+    - I'm leaving now
+    - got to go
+    - I'll be back
+    - end chat
+    - I'm done
+    - that's all I needed
+    - that's all for now
+    - that's it
+    - gotta run
+    - have to leave
+    - thanks bye
+    - okay bye
+    - alright bye
+    - closing now
+    - ending this conversation
+    - talk to you later
+    - chat with you later
+    - I'm leaving
+    - adios
+    - cheerio
+    - hasta luego
+    - going now
+    - logging off
+    - closing the chat
+    - good night
+    - good talking to you
+    - I'm satisfied now
+    - that answers my question bye
+    - got what I needed thanks bye
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+    - yeah
+    - yep
+    - yup
+    - correct
+    - that's right
+    - right
+    - indeed
+    - that's correct
+    - you got it
+    - absolutely
+    - definitely
+    - precisely
+    - exactly
+    - of course
+    - sure
+    - okay
+    - ok
+    - sounds good
+    - that works
+    - perfect
+    - great
+    - fine
+    - that's fine
+    - that sounds right
+    - I agree
+    - I think so
+    - affirmative
+    - certainly
+    - without a doubt
+    - you bet
+    - uh-huh
+    - mmm hmm
+    - right on
+    - will do
+    - I'd like that
+    - that's perfect
+    - spot on
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+    - nope
+    - no thanks
+    - not really
+    - no way
+    - not at all
+    - negative
+    - definitely not
+    - I don't think so
+    - I disagree
+    - that's incorrect
+    - that's wrong
+    - not right
+    - that's not it
+    - not exactly
+    - not what I wanted
+    - not what I'm looking for
+    - I don't need that
+    - not interested
+    - no need
+    - I'll pass
+    - never mind
+    - forget it
+    - not necessary
+    - I changed my mind
+    - let's not
+    - not now
+    - maybe later
+    - no thank you
+    - I don't want that
+    - that doesn't work for me
+    - that's not what I meant
+    - not quite
+
+- intent: thank
+  examples: |
+    - thank you
+    - thanks
+    - thanks a lot
+    - thank you very much
+    - I appreciate your help
+    - that's helpful
+    - you've been very helpful
+    - great, thanks
+    - thanks for the information
+    - that's what I needed to know
+    - you're the best
+    - much appreciated
+    - thank you for your time
+    - thanks for checking
+    - thanks for your assistance
+    - appreciate it
+    - thank you so much
+    - that was helpful
+    - you're very helpful
+    - thanks a bunch
+    - thanks a million
+    - I owe you one
+    - perfect, thank you
+    - excellent, thank you
+    - brilliant, thanks
+    - cheers
+    - good job
+    - well done
+    - I appreciate that
+    - thanks for explaining that
+    - thank you for clarifying
+    - that clears things up, thanks
+    - thanks for being so thorough
+    - you're a lifesaver
+    - that's exactly what I needed to know
+    - thanks for the quick response
+    - thank you for your patience
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: ask_who_are_you
+  examples: |
+    - Who are you?
+    - What is your name?
+    - Can you introduce yourself?
+    - Tell me who you are.
+    - What do people call you?
+    - What's your identity?
+    - Are you a bot?
+    - What's your purpose?
+    - Who am I talking to?
+    - Describe yourself.
+    - Do you have a name?
+    - What should I call you?
+    - Are you human?
+    - Are you an AI?
+    - What do you do?
+
+- intent: ask_who_develop_you
+  examples: |
+    - Who developed you?
+    - Who created you?
+    - Tell me about your developers.
+    - How were you made?
+    - Who built you?
+    - Where did you come from?
+    - Who is responsible for you?
+    - Who programmed you?
+    - Tell me about your creators.
+    - How were you designed?
+    - Which team developed you?
+    - Who coded you?
+    - What company made you?
+    - Who is behind your development?
+    - Are you open-source?
+
+- intent: ask_list
+  examples: |
+    - What do you have?
+    - What are u got?
+    - Show me all manufacturers.
+    - List all available brands.
+    - What brands do you have?
+    - Can you tell me the available manufacturers?
+    - Give me a list of manufacturers.
+    - What are the different brands available?
+    - Which manufacturers do you support?
+    - Tell me the brands and their categories.
+    - Brands?
+    - What brands?
+    - Show brands
+    - All brands please
+    - Manufacturers?
+    - Got a list?
+    - What options?
+    - Brands you carry?
+    - Show me options
+    - What's available?
+    - Companies?
+    - Which ones?
+    - Makers?
+    - List em all
+    - All of them
+    - What ya got?
+    - Just the brands
+    - Quick list?
+    - Brands real quick
+    - Gimme options
+    - Products
+    - List me the products
+    - List products
+
+- intent: ask_manufacturer_products
+  examples: |
+    - Do u have [Apple](manufacturer)?
+    - Have you got any [Dell](manufacturer)?
+    - Have [Apple](manufacturer)?
+    - Have [Apple](manufacturer)?
+    - Do you sell any [Apple](manufacturer)?
+    - Are [Dell](manufacturer) products available in your store?
+    - Can I buy a device from [HP](manufacturer) here?
+    - Is [Asus](manufacturer) one of your brands?
+    - Do you have [Lenovo](manufacturer) products in stock?
+    - Does your store carry items from [Microsoft](manufacturer)?
+    - Can I purchase [Razer](manufacturer) laptops from you?
+    - Do you sell gaming products from [Alienware](manufacturer)?
+    - Is [Samsung](manufacturer) included in your available brands?
+    - Can I get [Acer](manufacturer) laptops in your store?
+    - Do you sell products from [Apple](manufacturer)?
+    - Does your store have [Dell](manufacturer)?
+    - Can I find [HP](manufacturer) laptops here?
+    - Do you offer any items from [Asus](manufacturer)?
+    - Is [Lenovo](manufacturer) one of your brands?
+
+- intent: ask_category_products
+  examples: |
+    - Do you sell [ultrabook](category)?
+    - Are you selling [notebook](category)?
+    - Have [ultrabook](category)?
+    - U have [notebook](category)?
+    - You have [Gaming](category)?
+    - Do you sell [notebook](category)?
+    - Are there any [ultrabook](category) available?
+    - Can I buy a [Gaming](category) from your store?
+    - Do you carry [2 in 1 Convertible](category)?
+    - Are there [2-in-1 Convertibles](category) in stock?
+    - Does your store have [Netbook](category)?
+    - Do you offer [Netbook](category) for professionals?
+    - Can I find [Ultrabooks](category) here?
+    - Is there a section for [Netbook](category)?
+    - Do you sell [Ultrabook](category)?
+    - Do you have any [Netbook](category) in stock?
+    - Are there any [notebook](category) available?
+    - Does your store sell [Desktops](category)?
+    - Do you carry [Gaming](category)?
+    - Can I buy [Ultrabooks](category) from you?
+
+- intent: ask_model_name_details
+  examples: |
+    - Have u got [MacBook Air](model_name)?
+    - Do u have [MacBook Air](model_name)?
+    - Do you got [Swift 3](model_name)?
+    - Have you got [250 G6](model_name)?
+    - Do you have the [MacBook Air](model_name) in stock?
+    - Is the [250 G6](model_name) available right now?
+    - Can I buy the [Swift 3](model_name) today?
+    - Do you currently have the [Inspiron 3567](model_name)?
+    - Is the [XPS 13](model_name) still available for purchase?
+    - Does your store have the [Vivobook E200HA](model_name)?
+    - Is the [HP Envy x360](model_name) in stock?
+    - Can I get the [Aspire 3](model_name) from you?
+    - Do you carry the [MacBook Pro](model_name)?
+    - Is the [MacBook Air](model_name) still on sale?
+    - Do you have the [MacBook Air](model_name) in stock?
+    - Is the [ThinkPad X1](model_name) available?
+    - Can I buy the [ROG Zephyrus G14](model_name) from you?
+    - Do you have the [Surface Pro 9](model_name) right now?
+    - Is the [XPS 13](model_name) still available?
+
+- intent: ask_product_by_manufacturer_and_category
+  examples: |
+    - You have [Apple](manufacturer) [notebook](category)?
+    - U have [Apple](manufacturer) [notebook](category)?
+    - Have [Asus](manufacturer) [Ultrabooks](category)?
+    - Got any [Asus](manufacturer) [Ultrabooks](category)?
+    - Do you have [Apple](manufacturer) [notebook](category)?
+    - Are [Dell](manufacturer) [notebook](category) available?
+    - Can I find [notebook](category) from [dell](manufacturer) in your store?
+    - Do you carry any [HP](manufacturer) [ultrabook](category)?
+    - Are there any [Asus](manufacturer) [Ultrabooks](category) in stock?
+    - Do you sell [Apple](manufacturer) [notebook](category)?
+    - Are [Dell](manufacturer) [Gaming](category) available?
+    - Can I find [Notebook](category) from [Acer](manufacturer) in your store?
+    - Do you carry any [HP](manufacturer) [Notebook](category)?
+    - Are there any [Asus](manufacturer) [Ultrabooks](category) in stock?
+    - Do you have [Lenovo](manufacturer) [Legion Y520-15IKBN](category) for sale?
+    - Is there a selection of [Microsoft](manufacturer) [2-in-1 Convertibles](category)?
+    - Do you stock [Acer](manufacturer) [Touchscreen Laptops](category)?
+    - Can I buy [Razer](manufacturer) [Gaming Laptops](category) from you?
+    - Are there any [Alienware](manufacturer) [High-Performance PCs](category) available?
+
+- intent: ask_product_by_name
+  examples: |
+    - Details of product [MacBook Air](model_name)
+    - Product details [MacBook Air](model_name)
+    - Details of laptop [MacBook Air](model_name)
+    - Laptop details [MacBook Air](model_name)
+    - I want to know the details of this product [MacBook Air](model_name)
+    - Tell me the details of this product [MacBook Air](model_name)
+    - Details of this product [MacBook Air](model_name)
+    - Check if you have a [Apple](manufacturer) [Macbook Pro](model_name) that is a [ultrabook](category) and cpu [Intel Core i7 2.7GHz](cpu)?
+    - Show me a [HP](manufacturer) [250 G6](model_name) that is a [notebook](category) and cpu [Intel Core i5 7200U 2.5GHz](cpu)?
+    - Check if you have a [Apple](manufacturer) [Macbook Pro](model_name) with cpu [Intel Core i7 2.7GHz](cpu)?
+    - Show me a [HP](manufacturer) [250 G6](model_name) with cpu [Intel Core i5 7200U 2.5GHz](cpu)?
+    - Show me the [Inspiron 3567](model_name) with [4GB](ram) and [256GB SSD](storage) SSD.
+    - Find me the [Inspiron 3567](model_name) with [4gb](ram) and [256gb](storage) SSD.
+    - I need a [Lenovo](manufacturer) [Legion Y520-15IKBN](model_name) with [8GB](ram) and [128GB SSD + 1TB HDD](storage).
+    - Can you find the [Lenovo](manufacturer) [Legion Y520-15IKBN](model_name) with [8GB](ram) and [128GB SSD + 1TB HDD](storage)?
+    - Do you have the [MacBook Pro](model_name) with [8GB](ram) and [128GB SSD](storage) SSD?
+    - Do you have the [MacBook Pro](model_name) with [8GB](ram) and [128GB SSD](storage)?
+    - I’m looking for the [MacBook Pro](model_name) with [16GB](ram).
+    - I  want [MacBook Pro](model_name) with [8GB](ram).
+    - Is the [250 G6](model_name) available from [HP](manufacturer)?
+    - Give me specs of [250 G6](model_name) from [HP](manufacturer)
+    - Any details on the [EliteBook 840 G9](model_name) from [HP](manufacturer)?
+    - I need to know about the [Precision 5570](model_name) from [Dell](manufacturer)
+    - Show me the [Dell](manufacturer) [Inspiron 3567](model_name) model
+    - Can you find a [IdeaPad 320-15IKB](model_name)?
+    - Tell me about the [MacBook Pro](model_name)
+    - I'm looking for a  [Dell](manufacturer) [Inspiron 3567](model_name)
+    - What is the [Acer](manufacturer) [Swift 3](model_name) like?
+    - I want the [Asus](manufacturer)[ZenBook UX430UN](model_name)
+    - Find me a [Acer](manufacturer) [Aspire 3](model_name)    
+    - I need the [Dell](manufacturer) [XPS 13](model_name).
+    - Do you have the [HP](manufacturer) [250 G6](model_name)?
+    - Find me the [Asus](manufacturer) [Vivobook E200HA](model_name).
+    - Show me the  [Dell](manufacturer) [Inspiron 3567](model_name).
+    - Find me the [Lenovo](manufacturer) [IdeaPad 120S-14IAP](model_name).
+    - Do you have the [Asus](manufacturer) [X540UA-DM186](model_name)?
+    - Can you find the [Acer](manufacturer) [Aspire A515-51G](model_name)?
+    - I’m looking for the [Asus](manufacturer) [X542UQ-GO005](model_name).
+    - I'm looking for a [MacBook Pro](model_name)
+    - Show me [Apple](manufacturer) laptops with [Intel Core i7](cpu)
+    - Find me a [MacBook Pro](model_name) with [16GB](ram) RAM and [512GB](storage) SSD
+    - I want a [MacBook Air](model_name) with [Intel Core i5](cpu) and [256GB](storage) storage
+    - How about [Apple](manufacturer) laptops with [Intel Core i7](cpu)
+    - About [MacBook Pro](model_name) with [16GB](ram) RAM and [512GB](storage) SSD
+    - So about [MacBook Air](model_name) with [Intel Core i5](cpu) and [256GB](storage) storage
+    - Anything similar [MacBook Air](model_name) with [Intel Core i5](cpu) and [256GB](storage) storage
+    - Any [Apple](manufacturer) laptops with [Intel Core i7](cpu)
+    - A [MacBook Pro](model_name) with [16GB](ram) RAM and [512GB](storage) SSD
+    - An [Aspire 3](model_name) with [AMD A9-Series 9420 3GHz](cpu) and [500GB HDD](storage) storage
+    - You have a [HP](manufacturer) [250 G6](model_name) that is a [Notebook](category) and cpu [Intel Core i5 7200U 2.5GHz](cpu)?
+    - U got a [Apple](manufacturer) [Macbook Pro](model_name) that is a [Ultrabook](category) and cpu [Intel Core i7 2.7GHz](cpu)?
+    - Do you have a [HP](manufacturer) [250 G6](model_name) that is a [Notebook](category) and cpu [Intel Core i5 7200U 2.5GHz](cpu)?
+    - Do you got a [Apple](manufacturer) [Macbook Pro](model_name) that is a [Ultrabook](category) and cpu [Intel Core i7 2.7GHz](cpu)?
+    - Can you check if you have a [Apple](manufacturer) [Macbook Pro](model_name) that is a [ultrabook](category) and cpu [Intel Core i7 2.7GHz](cpu)?
+    - Do you have a [Apple](manufacturer) [Macbook Pro](model_name) that is a [Ultrabook](category) and cpu [Intel Core i7 2.7GHz](cpu)?
+    - Can you check if you have a [Apple](manufacturer) [Macbook Pro](model_name) with cpu [Intel Core i7 2.7GHz](cpu)?
+    - Do you have a [Apple](manufacturer) [Macbook Pro](model_name) with cpu [Intel Core i7 2.7GHz](cpu)?
+    - Do you got a [Apple](manufacturer) [Macbook Pro](model_name) with cpu [Intel Core i7 2.7GHz](cpu)?
+    - Do you have a [HP](manufacturer) [250 G6](model_name) with cpu [Intel Core i5 7200U 2.5GHz](cpu)?
+    - Do you have a [MacBook Air](model_name) with [8GB](ram) RAM?
+    - Is the [MacBook Air](model_name) from [Apple](manufacturer) available in [Laptops](category)?
+    - Do you have the [ThinkPad X1](model_name) from [Lenovo](manufacturer) in the [Business Laptop](category) section?
+    - Can I get a [ROG Zephyrus G14](model_name) [Gaming Laptop](category) from [Asus](manufacturer)?
+    - Is the [Dell XPS 13](model_name) available with an [Intel i7](cpu)?
+    - Do you offer the [HP Spectre x360](model_name) with [16GB RAM](ram)?
+    - Can I buy a [MacBook Pro](model_name) with [M3 Chip](cpu) from your store?
+    - Is the [Microsoft Surface Laptop 5](model_name) available in the [Touchscreen Laptop](category) category?
+    - Do you have a [Razer Blade 15](model_name) [Gaming Laptop](category) with [32GB RAM](ram)?
+    - Does the [Acer Swift 5](model_name) come with an [Intel i5](cpu)?
+    - Can I find the [Alienware m16](model_name) from [Dell](manufacturer) in the [Gaming Laptop](category) section?
+    - Do you have the [MacBook Air](model_name) from [Apple](manufacturer) in the [Laptop](category) category?
+    - Is the [MacBook Air](model_name) available from [Apple](manufacturer) under [Laptop](category)?
+    - Can I get a [MacBook Air](model_name) [Laptop](category) from [Apple](manufacturer) with an [M2 Chip](cpu)?
+    - Do you sell [MacBook Air](model_name) with [16GB](ram) RAM?
+
+- intent: ask_product_price
+  examples: |
+    - Laptop [Inspiron 3567](model_name) price
+    - [Inspiron 3567](model_name) price
+    - Price [Inspiron 3567](model_name)
+    - How much this [Inspiron 3567](model_name) with [Intel Core i3 6006U 2GHz](cpu), [4GB](ram) and [256GB SSD](storage) SSD cost?
+    - Find the price of [Inspiron 3567](model_name) with [Intel Core i3 6006U 2GHz](cpu), [4gb](ram) and [256gb](storage) SSD.
+    - Tell me the price of [Legion Y520-15IKBN](model_name) with [Intel Core i5 7300HQ 2.5GHz](cpu), [8GB](ram) and [128GB SSD + 1TB HDD](storage).
+    - Can you find the price [Legion Y520-15IKBN](model_name) with [Intel Core i5 7300HQ 2.5GHz](cpu), [8GB](ram) and [128GB SSD + 1TB HDD](storage) for me?
+    - Any price of [MacBook Pro](model_name) with [Intel Core i7 2.7GHz](cpu), [8GB](ram) and [128GB SSD](storage) SSD?
+    - Do you have the [MacBook Pro](model_name) with [Intel Core i7 2.7GHz](cpu), [8GB](ram) and [128GB SSD](storage) in mind
+    - How much does the [Macbook Pro](model_name) with cpu [Intel Core i7 2.7GHz](cpu)?
+    - How much does the [Macbook Pro](model_name) with cpu [Intel Core i7 2.7GHz](cpu)?
+    - How much [Macbook Pro](model_name) with cpu [Intel Core i7 2.7GHz](cpu)?
+    - Price of [Macbook Pro](model_name) with cpu [Intel Core i7 2.7GHz](cpu)
+    - Show me the price of [250 G6](model_name) with cpu [Intel Core i5 7200U 2.5GHz](cpu)?
+    - Price of [250 G6](model_name) with cpu [Intel Core i5 7200U 2.5GHz](cpu)?
+    - How much this [Inspiron 3567](model_name) with [4GB](ram) and [256GB SSD](storage) SSD cost?
+    - Find the price of [Inspiron 3567](model_name) with [4gb](ram) and [256gb](storage) SSD.
+    - Tell me the price of [Legion Y520-15IKBN](model_name) with [8GB](ram) and [128GB SSD + 1TB HDD](storage).
+    - Can you find the price [Legion Y520-15IKBN](model_name) with [8GB](ram) and [128GB SSD + 1TB HDD](storage) for me?
+    - Any price of [MacBook Pro](model_name) with [8GB](ram) and [128GB SSD](storage) SSD?
+    - Do you have the [MacBook Pro](model_name) with [8GB](ram) and [128GB SSD](storage) in mind?
+    - I’m looking the price of [MacBook Pro](model_name) with [16GB](ram).
+    - How much [MacBook Pro](model_name) with [8GB](ram)?
+    - Can you tell me the price of [MacBook Pro](model_name) with [16GB](ram) RAM and [512GB](storage) SSD?
+    - What’s the cost of [MacBook Air](model_name) with [Intel Core i5](cpu) and [256GB](storage) storage?
+    - What’s the retail price of [MacBook Air](model_name) with [Intel Core i5](cpu) and [256GB](storage) storage?
+    - How much is the [MacBook Air](model_name) laptops with [Intel Core i7](cpu)
+    - The price of [MacBook Pro](model_name) with [16GB](ram) RAM and [512GB](storage) SSD
+    - Price [Aspire 3](model_name) with [AMD A9-Series 9420 3GHz](cpu) and [500GB HDD](storage) storage
+    - How much does the [Aspire 3](model_name) cost?
+    - How much is [MacBook Pro](model_name) ? 
+    - Price of [MacBook Pro](model_name)?
+    - I want to know the price of [MacBook Pro](model_name).
+    - Tell me about the price of this laptop [MacBook Pro](model_name).
+    - Price of this laptop [MacBook Pro](model_name).
+    - What is the price of the [Inspiron 3567](model_name)?
+    - Can you tell me the price of [MacBook Air](model_name)?
+    - How much is the [MacBook Air](model_name) selling for?
+    - What’s the current price of [MacBook Pro](model_name)?
+    - How much do I need to pay for [Aspire 3](model_name)?
+    - What’s the cost of [Inspiron 3567](model_name)?
+    - Can you give me the latest price of[Inspiron 3567](model_name)?
+    - How much is [Inspiron 3567](model_name)?
+    - What is the price range for[MacBook Pro](model_name)?
+    - How much does [MacBook Pro](model_name) cost in dollars?
+    - What’s the price of the [MacBook Pro](model_name) in your store?
+    - Can you tell me the cost of [MacBook Pro](model_name) right now?
+    - How much would it cost to buy [MacBook Pro](model_name)?
+    - Is there a sale on [MacBook Pro](model_name) at the moment?
+    - What’s the retail price of [MacBook Pro](model_name)?
+    - How much is [MacBook Pro](model_name) compared to other models?
+    - What’s the price for the latest [MacBook Pro](model_name)?
+    - How much is the [MacBook Pro](model_name) with shipping included?
+    - What’s the final price for [MacBook Pro](model_name) after all fees?
+
+- intent: ask_product_exact_price
+  examples: |
+    - Laptop [1000.00](price)$
+    - Laptops [1000.00](price) dollars
+    - Product [1000.00](price)$
+    - Products [1000.00](price) dollars
+    - How about [2000.0](price) dollars?  
+    - How about with [2000](price) dollars?  
+    - Do you have laptop with [2000.00](price) dollars?  
+    - Give me the laptop that costs exactly [500.00 dollars](price)
+    - Show me laptops that are exactly [1339.69 dollars](price)
+    - Can you find products that are exactly [1500.00](price)?
+    - Show me laptops priced at [1200.15 dollars](price)
+    - Find products that cost exactly [800.50](price)
+    - Can you show me laptops priced exactly [1000 dollars](price)?
+    - What laptops are priced at [500](price)?
+    - What products are available at [700 dollars](price)?
+    - I want products that cost exactly [1200](price)
+    - Find me laptops that cost exactly [800 dollars](price)
+    - Show me items priced at [1000 dollars](price)
+    - List me the products priced exactly [500 dollars](price)
+    - Can I get a laptop for [2000](price) dollars?
+    - Show me items costing exactly [1500 dollars](price)
+    - Show me the laptop that costs [500 dollars](price)
+    - Find me products that are exactly [1000 dollars](price)
+    - Can you show me the laptop for [2000](price)?
+    - I want to buy a product that costs exactly [750](price)
+    - What laptops do you have for [1200.99 dollars](price)?
+    - Show me products priced exactly at [300](price)
+    - Do you have any products for [1500.15](price)?
+    - Find me a laptop for [1000 dollars](price)
+    - Can you give me laptops that cost [800](price)?
+    - I am looking for products priced exactly [1200 dollars](price)
+    - Show me laptops that are priced at [1000.59](price)
+    - Do you have anything for exactly [1500](price)?
+    - Can you find laptops that cost exactly [2500](price)?
+    - Can I get a product priced at [600 dollars](price)?
+    - Give me the product that costs exactly [900](price)
+    - List me laptops that are priced exactly [400.44](price)
+    - What products are priced at [1100.80 dollars](price)?
+    - Find me items for [2000](price) dollars exactly
+    - Laptops that are [500.99](price) dollars 
+    - Items that are [400](price) dollars in the Store 
+    - Laptop that is [500.99](price) dollars 
+    - Item that is [400.0](price) dollars in the Store 
+    - Products that are [400.30](price) dollars in the Store
+    - Can you find a product for me for [200](price) dollars? 
+    - Laptop with [1500](price) dollars.
+    - Laptops [200.99](price) dollars.
+    - What laptops are available for [500](price)?
+    - [Apple](manufacturer) laptops with [200.99](price) dollars.
+    - [Apple](manufacturer) laptop that is [2000.99](price) dollars.
+    - [HP](manufacturer) Notebook that price is [2000.99](price) dollars.
+    - Do you have any [Lenovo](manufacturer) laptops price [1000.99](price)?
+    - Do you have any [Lenovo](manufacturer) laptops with [1000.99](price) dollars?
+    - How about [apple](manufacturer) [2000.67](price) dollars?  
+    - How about [apple](manufacturer) [2000.0](price)? 
+    - Do you have [apple](manufacturer) product with [1200](price) dollars?  
+    - [Notebook](category) laptops with [200.99](price) dollars.
+    - [Notebook](category) laptop that is [2000.99](price) dollars.
+    - [Ultrabook](category) Notebook that price is [2000.99](price) dollars.
+    - Do you have any [notebook](category) laptops price [1000.99](price)?
+    - Do you have any [ultrabook](category) laptops with [1000.99](price) dollars?
+    - How about [ultrabook](category) [2000.67](price) dollars?  
+    - How about [notebook](category) [2000.0](price)? 
+    - Do you have [2 in 1 Convertible](category) product with [1200](price) dollars?  
+    - [Apple](manufacturer) [Notebook](category) with [200.99](price) dollars.
+    - [Apple](manufacturer) [Notebook](category) that is [2000.99](price) dollars.
+    - [HP](manufacturer) Notebook that price is [2000.99](price) dollars.
+    - Do you have any [Lenovo](manufacturer) [ultrabook](category) laptops price [1000.99](price)?
+    - Do you have any [Lenovo](manufacturer) [Ultrabook](category) laptops with [1000.99](price) dollars?
+    - How about [apple](manufacturer) [notebook](category) [2000.67](price) dollars?  
+    - How about [apple](manufacturer) [notebook](category) [2000.0](price)? 
+    - Do you have [apple](manufacturer) [notebook](category) product with [1200](price) dollars?  
+
+- intent: ask_product_above_price
+  examples: |
+    - Show me laptops above [1000 dollars](price)
+    - Find products over [500](price)
+    - I want products more than [700 dollars](price)
+    - Can you show me products above [1500](price)?
+    - Show me laptops priced above [1200](price)
+    - Find me products above [800](price)
+    - Can you show me laptops that cost more than [1000 dollars](price)?
+    - What products do you have above [500](price)?
+    - Can you find me something over [700 dollars](price)?
+    - What are the products available above [1500](price)?
+    - Can I get laptops priced over [1200](price)?
+    - Show me items priced higher than [800](price)
+    - List me the laptops that the price is high [1000](price)
+    - List the items which is costly more than [500](price)
+    - Give me the laptop that pricey more than [2000](price) dollars
+    - Laptop above [1500](price) dollars.
+    - Laptops higher [200.99](price) dollars.
+    - [Apple](manufacturer) laptops price more than [200.99](price) dollars.
+    - [Apple](manufacturer) laptop  high price [2000.99](price) dollars.
+    - [HP](manufacturer) Notebook that price is more [2000.99](price) dollars.
+    - Do you have any [Lenovo](manufacturer) laptops above [1000.99](price)?
+    - Do you have any [Lenovo](manufacturer) laptops over [1000.99](price) dollars?
+    - [2 in 1 Convertible](category) above [1500](price) dollars.
+    - [2 in 1 Convertible](category) higher [200.99](price) dollars.
+    - [Notebook](category) laptops price more than [200.99](price) dollars.
+    - [Ultrabook](category) laptop  high price [2000.99](price) dollars.
+    - [Ultrabook](category) Notebook that price is more [2000.99](price) dollars.
+    - Do you have any [notebook](category) laptops above [1000.99](price)?
+    - Do you have any [ultrabook)(category) laptops over [1000.99](price) dollars? 
+    - [Apple](manufacturer) [notebook](category) price more than [200.99](price) dollars.
+    - [Apple](manufacturer) [notebook](category)  high price [2000.99](price) dollars.
+    - [HP](manufacturer) [Notebook](category) that price is more [2000.99](price) dollars.
+    - Do you have any [Lenovo](manufacturer) [Ultrabook](category) above [1000.99](price)?
+    - Do you have any [Lenovo](manufacturer) [ultrabook](category) over [1000.99](price) dollars?
+
+- intent: ask_product_below_price
+  examples: |
+    - Show me laptops under [1000 dollars](price)
+    - What can I get for [300](price)?
+    - Can you show me something under [200](price)?
+    - I'd like a [laptop](category) for about [800](price)
+    - Are there any products below [1200 dollars](price)?
+    - Find products below [400](price)
+    - I'm looking for something within the [150](price) budget
+    - What laptops can I get for under [1000 dollars](price)?
+    - Are there any laptops available for [500](price)?
+    - What can I get with a budget of [300](price)?
+    - Show me products under [200](price), please
+    - Can you find me a [laptop](category) for about [800](price)?
+    - Are there any products available below [1200 dollars](price)?
+    - Can you show me products below [400](price)?
+    - I’m looking for something within [150](price). What do you have?
+    - Do you have laptops that is under [2000](price) dollars? 
+    - Laptop below [1500](price) dollars.
+    - Laptops below [200.99](price) dollars.
+    - [Apple](manufacturer) laptops  below [200.99](price) dollars.
+    - [Apple](manufacturer) laptop  below [2000.99](price) dollars.
+    - [HP](manufacturer) Notebook  below [2000.99](price) dollars.
+    - Do you have any [Lenovo](manufacturer) laptops under [1000.99](price)?
+    - Do you have any [Lenovo](manufacturer) laptops under [1000.99](price) dollars?
+    - [2 in 1 Convertible](category) under [1500](price) dollars.
+    - [2 in 1 Convertible](category) below [200.99](price) dollars.
+    - [Notebook](category) under more than [200.99](price) dollars.
+    - [Ultrabook](category) lower price [2000.99](price) dollars.
+    - [Ultrabook](category) that price is under [2000.99](price) dollars.
+    - Do you have any [notebook](category) under [1000.99](price)?
+    - Do you have any [ultrabook)(category) lower [1000.99](price) dollars? 
+    - [Apple](manufacturer) [notebook](category) price less than [200.99](price) dollars.
+    - [Apple](manufacturer) [notebook](category)  low price [2000.99](price) dollars.
+    - [HP](manufacturer) [Notebook](category) that price is under [2000.99](price) dollars.
+    - Do you have any [Lenovo](manufacturer) [Ultrabook](category) under [1000.99](price)?
+    - Do you have any [Lenovo](manufacturer) [ultrabook](category) below [1000.99](price) dollars?
+
+- intent: ask_product_between_prices
+  examples: |
+    - [Apple](manufacturer) between 2200 to 3000 dollars
+    - Items [500](min_price) to [1000](max_price)?
+    - Products [200](min_price) to [400](max_price)?
+    - Range [50](min_price) to [100](max_price)?
+    - Options [300](min_price) to [700](max_price)?
+    - What are the options in the [1000](min_price) to [1500](max_price) range?
+    - Show me products between [500](min_price) and [1000](max_price)
+    - I want products in the range of [300](min_price) to [800](max_price)
+    - Find products between [1000](min_price) and [1500](max_price)
+    - Show products in the range of [200](min_price) to [400](max_price)
+    - I want products between [600](min_price) and [1200](max_price)
+    - Show me products from [100](min_price) to [500](max_price)
+    - I'm looking for something between [150](min_price) and [400](max_price)
+    - What are the options available in the range between [1000](price) and [1500](max_price)?
+    - Can you show me products between [500](min_price) and [1000](max_price)?
+    - What products can I find between [300](min_price) and [800](max_price)?
+    - Do you have any products in the range of [1000](min_price) to [1500](max_price)?
+    - Are there products available between [200](min_price) and [400](max_price)?
+    - What options do you have between [600](min_price) and [1200](max_price)?
+    - Can you show me items from [100](min_price) to [500](max_price)?
+    - I’m looking for products between [150](min_price) and [400](max_price). What do you suggest?
+    - Between [1000](min_price) to [2000](max_price) dollars? 
+    - What are the [Apple](manufacturer) in the [1000](price) to [1500](max_price) range?
+    - Show me [Apple](manufacturer) between [500](min_price) and [1000](max_price)
+    - I want [Apple](manufacturer) products in the range of [300](min_price) to [800](max_price)
+    - Find [Lenovo](manufacturer) products between [1000](min_price) and [1500](max_price)
+    - Show [HP](manufacturer) products in the range of [200](min_price) to [400](max_price)
+    - I want [Apple](manufacturer) laptops between [600](min_price) and [1200](max_price)
+    - Show me [Asus](manufacturer) laptop from [100](min_price) to [500](max_price)
+    - [Acer](manufacturer) laptops between [600](min_price) and [1200](max_price)
+    - Give me [Asus](manufacturer) laptop from [100](min_price) to [500](max_price)
+    - Lists [Acer](manufacturer) laptops between [600](min_price) and [1200](max_price)
+    - Show me [MSI](manufacturer) laptop from [100](min_price) to [500](max_price)
+    - [Apple](manufacturer) [1000](min_price) dollars to [2000](max_price) dollars
+    - What are the [notebook](category) in the [1000](price) to [1500](max_price) range?
+    - Show me [ultrabook](category) between [500](min_price) and [1000](max_price)
+    - I want [notebook](category) products in the range of [300](min_price) to [800](max_price)
+    - Find [notebook](category) products between [1000](min_price) and [1500](max_price)
+    - Show [ultrabook](category) products in the range of [200](min_price) to [400](max_price)
+    - I want [notebook](category) laptops between [600](min_price) and [1200](max_price)
+    - Show me [notebook](category) laptop from [100](min_price) to [500](max_price)
+    - [2 in 1 Convertible](category) laptops between [600](min_price) and [1200](max_price)
+    - Give me [2 in 1 Convertible](category) laptop from [100](min_price) to [500](max_price)
+    - Lists [ultrabook](category) laptops between [600](min_price) and [1200](max_price)
+    - Show me [notebook](category) laptop from [100](min_price) to [500](max_price)
+    - What are the [Apple](manufacturer) [notebook](category) in the [1000](price) to [1500](max_price) range?
+    - Show me [Apple](manufacturer) [notebook](category) between [500](min_price) and [1000](max_price)
+    - I want [Apple](manufacturer) [notebook](category) products in the range of [300](min_price) to [800](max_price)
+    - Find [Lenovo](manufacturer) [ultrabook](category) products between [1000](min_price) and [1500](max_price)
+    - Show [HP](manufacturer) [ultrabook](category) products in the range of [200](min_price) to [400](max_price)
+    - I want [Apple](manufacturer) [notebook](category) between [600](min_price) and [1200](max_price)
+    - Show me [Asus](manufacturer) [notebook](category) from [100](min_price) to [500](max_price)
+    - [Acer](manufacturer) [notebook](category) between [600](min_price) and [1200](max_price)
+    - Give me [Asus](manufacturer) [ultrabook](category) from [100](min_price) to [500](max_price)
+    - Lists [Acer](manufacturer) [notebook](category) between [600](min_price) and [1200](max_price)
+    - Show me [MSI](manufacturer) [ultrabook](category) from [100](min_price) to [500](max_price)
+
+- intent: ask_product_by_category
+  examples: |
+    - [Gaming](category) laptop
+    - [Gaming](category) product
+    - Show me [Gaming](category) in your store
+    - What are the best [tablets](category) you have?
+    - I need a [gaming laptop](category)
+    - Find me some [Gaming](category) like products
+    - What are your [2 in 1 Convertible](category) available?
+    - Show me [Gaming](category)
+    - I am looking for a [Gaming](category)
+    - What kind of [2 in 1 Convertible](category) do you have?
+    - Are there any [desktops](category) in stock?
+    - Show me some [Ultrabook](category)
+    - What [gaming](category) do you recommend?
+    - Show me your selection of [Notebook](category)
+    - I want to see all your [Notebook](category)
+    - What's available in [Notebook](category) equipment?
+    - I need to browse your [Gaming](category) options
+    - What are the most popular [Gaming](category) you sell?
+    - Show me the latest [2 in 1 Convertible](category)
+    - What kind of [2 in 1 Convertible](category) do you have?
+    - I'm interested in your [Notebook](category)
+    - What [Gaming](category) do you recommend?
+
+- intent: ask_product_by_manufacturer
+  examples: |
+    - [Apple](manufacturer) laptops
+    - [Apple](manufacturer) products
+    - Find me products made by [Acer](manufacturer)
+    - What [HP](manufacturer) products do you have?
+    - I am looking for [Lenovo](manufacturer) laptops
+    - Can you show me [Asus](manufacturer) products?
+    - Find me [Microsoft](manufacturer) laptops
+    - What products are there from [Acer](manufacturer)?
+    - Show me items by [Razer](manufacturer)
+    - I want products by [MSI](manufacturer)
+    - What is available from [Razer](manufacturer)?
+    - How about [HP](manufacturer) products?
+    - Any [HP](manufacturer) models in the store?
+    - Show me some brand of [Lenovo](manufacturer).
+    - How about this [Asus](manufacturer)?
+    - List any [Dell](manufacturer) product that available? 
+    - Got any [Dell](manufacturer)?
+    - Need [HP](manufacturer) products
+    - Looking for [HP](manufacturer)
+    - [Razer](manufacturer) available?
+    - [Dell](manufacturer) laptops in stock?
+    - [Asus](manufacturer) products here?
+    - [Microsoft](manufacturer) items?
+    - [Lenovo](manufacturer) computers?
+    - Need [HP](manufacturer)
+    - [Asus](manufacturer) in stock?
+    - [Dell](manufacturer) here?

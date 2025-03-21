@@ -1,0 +1,158 @@
+version: "3.1"
+
+intents:
+  - start
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - thank
+  - bot_challenge
+  - ask_who_are_you
+  - ask_who_develop_you
+
+  # PRIVATE
+  - ask_list
+  - ask_manufacturer_products
+  - ask_category_products
+  - ask_model_name_details
+  - ask_product_by_manufacturer_and_category
+  - ask_product_by_name
+  - ask_product_price
+  - ask_product_exact_price
+  - ask_product_above_price
+  - ask_product_below_price
+  - ask_product_between_prices
+  - ask_product_by_category
+  - ask_product_by_manufacturer
+
+responses:
+  utter_start:
+    - text: "Hello! Welcome to the ECI Bot. How can I assist you today?"
+
+  utter_greet:
+    - text: "Hello! Welcome to the ECI Bot. How can I assist you today?"
+    - text: "Hello! Welcome to the ECI Bot. Are you looking for information about our products today?"
+    - text: "Hi there! Welcome to the ECI Bot. Would you like to explore our products?"
+    - text: "Welcome! Welcome to the ECI Bot. Are you interested in checking out our latest products?"
+    - text: "Greetings! Welcome to the ECI Bot. Would you like to know more about our available products?"
+    - text: "Hey! Welcome to the ECI Bot. Do you need details on any of our products?"
+    - text: "Hello! Welcome to the ECI Bot. Are you searching for specific product details today?"
+
+  utter_ask_list:
+    - text: "Would you like to see our list?"
+    - text: "Would you prefer to explore our product list?"
+    - text: "Are you interested in seeing the list of available products?"
+    - text: "Would you like to browse through our list?"
+    - text: "Do you want to check out our list of products?"
+    - text: "Would you like to view our full list?"
+    - text: "Are you interested in exploring our list of products?"
+
+  utter_ask_for_products:
+    - text: "Please provide the information of the products that you want to know about!"
+    - text: "Please tell me what kind of the products that you want to explore!"
+    - text: "Please give me the details of the products that you want to see!"
+
+  utter_ask_products:
+    - text: "Do you want any specific products directly?"
+    - text: "Do you have any products in mind?"
+    - text: "Are you thinking of any particular products?"
+    - text: "Is there a specific product you're looking for?"
+    - text: "Do you have a product in mind?"
+
+  utter_thank:
+    - text: "You're welcome! Is there anything else I can help you with?"
+    - text: "My pleasure! Let me know if you need anything else."
+    - text: "Happy to help! Don't hesitate to ask if you have other questions."
+    - text: "Glad I could be of assistance! Anything else on your mind?"
+    - text: "It's no problem at all. I'm here if you need any more information."
+    - text: "You're very welcome! I'm glad I could help. Is there anything else you'd like to know?"
+    - text: "Anytime! Your satisfaction is our priority. What else can I assist you with today?"
+    - text: "The pleasure is mine! Feel free to reach out anytime you have questions about our products."
+    - text: "I'm happy I could be of service. Is there anything else you're curious about?"
+    - text: "You're welcome! I'm here to make your shopping experience as smooth as possible."
+
+  utter_goodbye:
+    - text: "Goodbye! If you have any more questions in the future or need assistance, feel free to reach out. Take care!"
+    - text: "Alright, take care! 👋😊"
+
+  utter_who_are_you:
+    - text: |
+        I am the official virtual assistant of ECI, here to assist you in navigating the digital tools and services provided by the Store.
+
+  utter_who_develop_you:
+    - text: |
+        This bot is developed by ECI Distribution Company.
+
+actions:
+  - action_check_manufacturer
+  - action_check_category
+  - action_check_model
+  - action_check_manufacturer_category
+  - action_list
+  - action_fetch_product_by_name
+  - action_provide_product_price
+  - action_fetch_product_at_exact_price
+  - action_fetch_product_above_price
+  - action_fetch_product_below_price
+  - action_fetch_product_between_prices
+  - action_fetch_product_by_category
+  - action_fetch_product_by_manufacturer
+
+entities:
+  - model_name
+  - cpu
+  - ram
+  - storage
+  - category
+  - manufacturer
+  - price
+  - max_price
+  - min_price
+
+slots:
+  model_name:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: model_name
+  cpu:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: cpu
+  ram:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: ram
+  storage:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: storage
+  category:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: category
+  manufacturer:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: manufacturer
+  price:
+    type: float
+    mappings:
+      - type: from_entity
+        entity: price
+  max_price:
+    type: float
+    mappings:
+      - type: from_entity
+        entity: max_price
+  min_price:
+    type: float
+    mappings:
+      - type: from_entity
+        entity: min_price
