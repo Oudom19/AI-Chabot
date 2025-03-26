@@ -159,7 +159,7 @@ class ActionFetchProductAbovePrice(Action):
             for product in products:
                 dispatcher.utter_message(
                     text=(
-                        f"\n■ {product['model_name']}\n"
+                        f"\n■ Model: {product['model_name']}\n"
                         f"○ Manufacturer: {product['manufacturer']}\n"
                         f"○ Price: ${product['price']:.2f}\n"
                         f"○ Category: {product['category']}\n"

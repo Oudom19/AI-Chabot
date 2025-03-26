@@ -2,6 +2,7 @@ from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 import random
 from ..actions import get_db_connection
+from rasa_sdk.events import SlotSet
 
 class ActionFetchProductByManufacturer(Action):
     def name(self) -> str:
@@ -109,4 +110,4 @@ class ActionFetchProductByManufacturer(Action):
         cursor.close()
         connection.close()
 
-        return []
+        return [SlotSet("manufacturer", None)]

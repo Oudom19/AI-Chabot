@@ -1,0 +1,11 @@
+rasa-sdk==3.6.2
+pymysql==1.1.0  # MySQL connector without protobuf conflicts
+SQLAlchemy==1.4.46
+
+# Special versions that work together:
+googleapis-common-protos==1.61.0  # Supports protobuf 4.x
+protobuf==4.23.3  # Matches Rasa's requirement
+grpcio==1.62.3
+grpcio-health-checking==1.62.3
+grpcio-status==1.62.3
+grpcio-tools==1.62.3

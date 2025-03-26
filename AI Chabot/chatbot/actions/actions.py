@@ -6,10 +6,9 @@ def get_db_connection():
             host="localhost",
             user="root",
             password="",
-            database="Product"
+            database="db_name"
         )
     except mysql.connector.Error as err:
         print(f"Database Error: {err}")
         return None
-
 

@@ -8,10 +8,12 @@ stories:
 
 - story: Greet first and then deny
   steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: deny
-  - action: utter_goodbye
+    - intent: greet
+    - action: utter_greet
+    - intent: deny
+    - action: utter_goodbye
+    - intent: affirm
+    - action: utter_see_u_again
 
 - story: user asks who are you
   steps:
@@ -23,120 +25,130 @@ stories:
     - intent: ask_who_develop_you
     - action: utter_who_develop_you
 
-#Story list
 - story: List the brand and category and continue
   steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: affirm
-  - action: utter_ask_list
-  - intent: affirm
-  - action: action_list
-  - intent: affirm
-  - action: utter_ask_for_products
-
+    - intent: greet
+    - action: utter_greet
+    - intent: affirm
+    - action: utter_ask_list
+    - intent: affirm
+    - action: action_list
+    - intent: affirm
+    - action: utter_ask_for_products
 
 - story: List the brand and category and stop, then ask for specific product
   steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: affirm
-  - action: utter_ask_list
-  - intent: affirm
-  - action: action_list
-  - intent: deny
-  - action: utter_ask_products
-  - intent: affirm
-  - action: utter_ask_for_products
+    - intent: greet
+    - action: utter_greet
+    - intent: affirm
+    - action: utter_ask_list
+    - intent: affirm
+    - action: action_list
+    - intent: deny
+    - action: utter_ask_products
+    - intent: affirm
+    - action: utter_ask_for_products
 
 - story: List the brand and category and stop, then ask for specific product and deny
   steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: affirm
-  - action: utter_ask_list
-  - intent: affirm
-  - action: action_list
-  - intent: deny
-  - action: utter_ask_products
-  - intent: deny
-  - action: utter_goodbye
+    - intent: greet
+    - action: utter_greet
+    - intent: affirm
+    - action: utter_ask_list
+    - intent: affirm
+    - action: action_list
+    - intent: deny
+    - action: utter_ask_products
+    - intent: deny
+    - action: utter_goodbye
+    - intent: affirm
+    - action: utter_see_u_again
 
 - story: Deny after asked to show the list but not yet show the list
   steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: affirm
-  - action: utter_ask_list
-  - intent: deny
-  - action: utter_ask_products
-  - intent: deny
-  - action: utter_goodbye
+    - intent: greet
+    - action: utter_greet
+    - intent: affirm
+    - action: utter_ask_list
+    - intent: deny
+    - action: utter_ask_products
+    - intent: deny
+    - action: utter_goodbye
+    - intent: affirm
+    - action: utter_see_u_again
 
 - story: List the brand and category
   steps:
-  - intent: ask_list
-  - action: action_list
+    - intent: ask_list
+    - action: action_list
 
-#Story for Manufacturer
+# Story for Manufacturer
 - story: Ask to check the products by manufacturer continue
   steps:
-  - intent: ask_manufacturer_products
-  - action: action_check_manufacturer
-  - intent: affirm
-  - action: utter_ask_for_products
+    - intent: ask_manufacturer_products
+    - action: action_check_manufacturer
+    - intent: affirm
+    - action: utter_ask_for_products
 
 - story: Ask to check the products by manufacturer and deny
   steps:
-  - intent: ask_manufacturer_products
-  - action: action_check_manufacturer
-  - intent: deny
-  - action: utter_goodbye
+    - intent: ask_manufacturer_products
+    - action: action_check_manufacturer
+    - intent: deny
+    - action: utter_goodbye
+    - intent: affirm
+    - action: utter_see_u_again
 
-#Story for Category
+# Story for Category
 - story: Ask to check the products by category continue
   steps:
-  - intent: ask_category_products #place to change
-  - action: action_check_category
-  - intent: affirm
-  - action: utter_ask_for_products
+    - intent: ask_category_products
+    - action: action_check_category
+    - intent: affirm
+    - action: utter_ask_for_products
 
 - story: Ask to check the products by category and deny
   steps:
-  - intent: ask_category_products #place to change
-  - action: action_check_category
-  - intent: deny
-  - action: utter_goodbye
+    - intent: ask_category_products
+    - action: action_check_category
+    - intent: deny
+    - action: utter_goodbye
+    - intent: affirm
+    - action: utter_see_u_again
 
-#Story for Model
-- story: Ask to check the products by category continue
+# Story for Model
+- story: Ask to check the products by model continue
   steps:
-  - intent: ask_model_name_details #place to change
-  - action: action_check_model
-  - intent: affirm
-  - action: utter_ask_for_products
+    - intent: ask_model_name_details
+    - action: action_check_model
+    - intent: affirm
+    - action: utter_ask_for_products
 
-- story: Ask to check the products by category and deny
+- story: Ask to check the products by model and deny
   steps:
-  - intent: ask_model_name_details #place to change
-  - action: action_check_model
-  - intent: deny
-  - action: utter_goodbye
+    - intent: ask_model_name_details
+    - action: action_check_model
+    - intent: deny
+    - action: utter_goodbye
+    - intent: affirm
+    - action: utter_see_u_again
 
-#Story for manufacturer and category
-- story: Ask to check the products by category continue
+# Story for manufacturer and category
+- story: Ask to check the products by manufacturer and category continue
   steps:
-  - intent: ask_product_by_manufacturer_and_category #place to change
-  - action: action_check_manufacturer_category
-  - intent: affirm
-  - action: utter_ask_for_products
+    - intent: ask_product_by_manufacturer_and_category
+    - action: action_check_manufacturer_category
+    - intent: affirm
+    - action: utter_ask_for_products
 
-- story: Ask to check the products by category and deny
+- story: Ask to check the products by manufacturer and category and deny
   steps:
-  - intent: ask_product_by_manufacturer_and_category #place to change
-  - action: action_check_manufacturer_category
-  - intent: deny
-  - action: utter_goodbye
+    - intent: ask_product_by_manufacturer_and_category
+    - action: action_check_manufacturer_category
+    - intent: deny
+    - action: utter_goodbye
+    - intent: affirm
+    - action: utter_see_u_again
 
 - story: user thanks
   steps:
@@ -145,13 +157,18 @@ stories:
 
 - story: Fetch products info by name
   steps:
-  - intent: ask_product_by_name
-  - action: action_fetch_product_by_name
+    - intent: ask_product_by_name
+    - action: action_fetch_product_by_name
+
+- story: Fetch products info by common name
+  steps:
+    - intent: ask_product_by_common_name
+    - action: action_fetch_product_by_common_name
 
 - story: Provide the price of the products
   steps:
-  - intent: ask_product_price
-  - action: action_provide_product_price
+    - intent: ask_product_price
+    - action: action_provide_product_price
 
 - story: Fetch products info by price
   steps:
@@ -169,11 +186,198 @@ stories:
 
 - story: Fetch products info by category
   steps:
-  - intent: ask_product_by_category
-  - action: action_fetch_product_by_category
+    - intent: ask_product_by_category
+    - action: action_fetch_product_by_category
 
 - story: Fetch products info by manufacturer
   steps:
-  - intent: ask_product_by_manufacturer
-  - action: action_fetch_product_by_manufacturer
+    - intent: ask_product_by_manufacturer
+    - action: action_fetch_product_by_manufacturer
+
+#Khmer Language Stories######################################################
+- story: Greet first and then deny in khmer language
+  steps:
+    - intent: greet_kh
+    - action: utter_greet_kh
+    - intent: deny_kh
+    - action: utter_goodbye_kh
+    - intent: affirm_kh
+    - action: utter_see_u_again_kh
+
+- story: user asks who are you in khmer language
+  steps:
+    - intent: ask_who_are_you_kh
+    - action: utter_who_are_you_kh
+
+- story: user asks who developed you in khmer language
+  steps:
+    - intent: ask_who_develop_you_kh
+    - action: utter_who_develop_you_kh
+
+# Story list
+- story: List products in khmer language
+  steps:
+  - intent: ask_list_kh
+  - action: action_list_kh
+
+- story: List the brand and category and continue in khmer language
+  steps:
+    - intent: greet_kh
+    - action: utter_greet_kh
+    - intent: affirm_kh
+    - action: utter_ask_list_kh
+    - intent: affirm_kh
+    - action: action_list_kh
+    - intent: affirm_kh
+    - action: utter_ask_for_products_kh
+
+- story: List the brand and category and stop, then ask for specific product in khmer language
+  steps:
+    - intent: greet_kh
+    - action: utter_greet_kh
+    - intent: affirm_kh
+    - action: utter_ask_list_kh
+    - intent: affirm_kh
+    - action: action_list_kh
+    - intent: deny_kh
+    - action: utter_ask_products_kh
+    - intent: affirm_kh
+    - action: utter_ask_for_products_kh
+
+- story: List the brand and category and stop, then ask for specific product and deny in khmer language
+  steps:
+    - intent: greet_kh
+    - action: utter_greet_kh
+    - intent: affirm_kh
+    - action: utter_ask_list_kh
+    - intent: affirm_kh
+    - action: action_list_kh
+    - intent: deny_kh
+    - action: utter_ask_products_kh
+    - intent: deny_kh
+    - action: utter_goodbye_kh
+    - intent: affirm_kh
+    - action: utter_see_u_again_kh
+
+- story: Deny after asked to show the list but not yet show the list in khmer language
+  steps:
+    - intent: greet_kh
+    - action: utter_greet_kh
+    - intent: affirm_kh
+    - action: utter_ask_list_kh
+    - intent: deny_kh
+    - action: utter_ask_products_kh
+    - intent: deny_kh
+    - action: utter_goodbye_kh
+    - intent: affirm_kh
+    - action: utter_see_u_again_kh
+
+# Story for Manufacturer
+- story: Ask to check the products by manufacturer continue in khmer language
+  steps:
+    - intent: ask_manufacturer_products_kh
+    - action: action_check_manufacturer_kh
+    - intent: affirm_kh
+    - action: utter_ask_for_products_kh
+
+- story: Ask to check the products by manufacturer and deny in khmer language
+  steps:
+    - intent: ask_manufacturer_products_kh
+    - action: action_check_manufacturer_kh
+    - intent: deny_kh
+    - action: utter_goodbye_kh
+    - intent: affirm_kh
+    - action: utter_see_u_again_kh
+
+# Story for Category
+- story: Ask to check the products by category continue in khmer language
+  steps:
+    - intent: ask_category_products_kh
+    - action: action_check_category_kh
+    - intent: affirm_kh
+    - action: utter_ask_for_products_kh
+
+- story: Ask to check the products by category and deny in khmer language
+  steps:
+    - intent: ask_category_products_kh
+    - action: action_check_category_kh
+    - intent: deny_kh
+    - action: utter_goodbye_kh
+    - intent: affirm_kh
+    - action: utter_see_u_again_kh
+
+# Story for Model
+- story: Ask to check the products by model continue in khmer language
+  steps:
+    - intent: ask_model_name_details_kh
+    - action: action_check_model_kh
+    - intent: affirm_kh
+    - action: utter_ask_for_products_kh
+
+- story: Ask to check the products by model and deny in khmer language
+  steps:
+    - intent: ask_model_name_details_kh
+    - action: action_check_model_kh
+    - intent: deny_kh
+    - action: utter_goodbye_kh
+    - intent: affirm_kh
+    - action: utter_see_u_again_kh
+
+# Story for manufacturer and category
+- story: Ask to check the products by manufacturer and category continue in khmer language
+  steps:
+    - intent: ask_product_by_manufacturer_and_category_kh
+    - action: action_check_manufacturer_category_kh
+    - intent: affirm_kh
+    - action: utter_ask_for_products_kh
+
+- story: Ask to check the products by manufacturer and category and deny in khmer language
+  steps:
+    - intent: ask_product_by_manufacturer_and_category_kh
+    - action: action_check_manufacturer_category_kh
+    - intent: deny_kh
+    - action: utter_goodbye_kh
+    - intent: affirm_kh
+    - action: utter_see_u_again_kh
+
+- story: user thanks in khmer language
+  steps:
+    - intent: thank_kh
+    - action: utter_thank_kh
+
+- story: Fetch products info by name in khmer language
+  steps:
+    - intent: ask_product_by_name_kh
+    - action: action_fetch_product_by_name_kh
+
+- story: Fetch products info by common name in Khmer language
+  steps:
+    - intent: ask_product_by_common_name_kh
+    - action: action_fetch_product_by_common_name_kh
+
+- story: Provide the price of the products in khmer language
+  steps:
+    - intent: ask_product_price_kh
+    - action: action_provide_product_price_kh
+
+- story: Fetch products info by price in khmer language
+  steps:
+    - intent: ask_product_exact_price_kh
+    - action: action_fetch_product_at_exact_price_kh
+    - intent: ask_product_above_price_kh
+    - action: action_fetch_product_above_price_kh
+    - intent: ask_product_below_price_kh
+    - action: action_fetch_product_below_price_kh
+    - intent: ask_product_between_prices_kh
+    - action: action_fetch_product_between_prices_kh
+
+- story: Fetch products info by category in khmer language
+  steps:
+    - intent: ask_product_by_category_kh
+    - action: action_fetch_product_by_category_kh
+
+- story: Fetch products info by manufacturer in khmer language
+  steps:
+    - intent: ask_product_by_manufacturer_kh
+    - action: action_fetch_product_by_manufacturer_kh
 

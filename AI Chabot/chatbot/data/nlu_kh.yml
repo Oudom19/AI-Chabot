@@ -1,0 +1,691 @@
+version: "3.1"
+nlu:
+  - intent: greet_kh
+    examples: |
+      - ជំរាបសួរ
+      - សួស្តី
+      - ជំរាបសួរបង
+      - សួស្តីបង
+      - ជំរាបសួរប្អូន
+      - សួស្តីប្អូន
+
+  - intent: goodbye_kh
+    examples: |
+      - លាហើយ
+      - លាសិនហើយ
+      - បន្តិចទៀតជួបគ្នា
+      - ជំរាបលា
+      - ចូលចិត្តណាស់ លាហើយ
+      - សូមអរគុណ លាហើយ
+      - លាហើយ សុខសប្បាយ
+      - ជួបគ្នាពេលក្រោយ
+      - លាហើយ ថ្ងៃនេះ
+      - បាយបាយ
+
+  - intent: affirm_kh
+    examples: |
+      - បាទ
+      - បាទបង
+      - បាទចាស
+      - ចាស
+      - យល់ព្រម
+      - ពិតជាយល់ព្រម
+      - មែនហើយ
+      - ត្រូវហើយ
+      - ពិតជាត្រូវហើយ
+      - អើ
+      - អើចាស
+      - ប្រាកដហើយ
+      - យល់ស្រប
+      - ពិតជាយល់ស្រប
+
+  - intent: deny_kh
+    examples: |
+      - ទេ
+      - ទេអត់ទេ
+      - អត់ទេ
+      - មិនមែនទេ
+      - មិនបាទ
+      - មិនយល់ព្រមទេ
+      - មិនអីទេ
+      - មិនត្រូវទេ
+      - មិនចង់ទេ
+      - មិនបានទេ
+      - មិនចាំបាច់ទេ
+      - មិនអាចទេ
+      - មិនសម្រេចទេ
+
+  - intent: thank_kh
+    examples: |
+      - អរគុណ
+      - អរគុណច្រើន
+      - អរគុណណាស់
+      - អរគុណដែលជួយ
+      - អរគុណសម្រាប់ការជួយ
+      - អរគុណច្រើនណាស់
+      - អរគុណពីបេះដូង
+      - អរគុណសម្រាប់ពេលវេលា
+      - អរគុណសម្រាប់ការគាំទ្រ
+      - អរគុណសម្រាប់អ្វីៗទាំងអស់
+      - អរគុណដែលធ្វើឱ្យខ្ញុំសប្បាយចិត្ត
+
+  - intent: bot_challenge_kh
+    examples: |
+      - តើអ្នកជាបូតទេ?
+      - តើខ្ញុំកំពុងនិយាយជាមួយរូបយន្តមែនទេ?
+      - តើខ្ញុំកំពុងនិយាយជាមួយមនុស្សមែនទេ?
+      - អ្នកជាម៉ាស៊ីនមែនទេ?
+      - អ្នកជាមនុស្សឬរូបយន្ត?
+
+  - intent: ask_who_are_you_kh
+    examples: |
+      - តើអ្នកជានរណា?
+      - តើអ្នកមានឈ្មោះអ្វី?
+      - តើអ្នកអាចណែនាំខ្លួនអ្នកបានទេ?
+      - ប្រាប់ខ្ញុំថាអ្នកជានរណា។
+      - តើមនុស្សហៅអ្នកថាម៉េច?
+      - តើអត្តសញ្ញាណរបស់អ្នកគឺអ្វី?
+      - តើគោលបំណងរបស់អ្នកគឺអ្វី?
+      - តើខ្ញុំកំពុងនិយាយជាមួយនរណា?
+      - សូមពណ៌នាអំពីខ្លួនអ្នក។
+      - តើអ្នកមានឈ្មោះទេ?
+      - តើខ្ញុំគួរហៅអ្នកថាម៉េច?
+      - តើអ្នកធ្វើអ្វី?
+
+  - intent: ask_who_develop_you_kh
+    examples: |
+      - តើអ្នកណាបានបង្កើតអ្នក?
+      - តើអ្នកណាបានធ្វើអ្នក?
+      - ប្រាប់ខ្ញុំអំពីអ្នកអភិវឌ្ឍន៍របស់អ្នក។
+      - តើអ្នកត្រូវបានបង្កើតយ៉ាងដូចម្តេច?
+      - តើអ្នកណាបានសាងសង់អ្នក?
+      - តើអ្នកមកពីណា?
+      - តើអ្នកណាទទួលខុសត្រូវចំពោះអ្នក?
+      - តើអ្នកណាបានសរសេរកូដអ្នក?
+      - ប្រាប់ខ្ញុំអំពីអ្នកបង្កើតរបស់អ្នក។
+      - តើអ្នកត្រូវបានរចនាយ៉ាងដូចម្តេច?
+      - តើក្រុមណាបានអភិវឌ្ឍអ្នក?
+      - តើអ្នកណាបានសរសេរកូដអ្នក?
+      - តើក្រុមហ៊ុនណាបានបង្កើតអ្នក?
+      - តើអ្នកណានៅពីក្រោយការអភិវឌ្ឍន៍របស់អ្នក?
+
+  - intent: ask_list_kh
+    examples: |
+      - តើខ្ញុំអាចមើលបញ្ជីបានទេ?
+      - តើខ្ញុំអាចមើលបញ្ជីផលិតផលបានទេ?
+      - តើខ្ញុំអាចមើលបញ្ជីបង?
+      - តើខ្ញុំអាចមើលបញ្ជីប្អូន?- មានបញ្ជីទេ?
+      - តើមានជម្រើសអ្វីខ្លះ?
+      - តើអ្នកមានម៉ាកអ្វីខ្លះ?
+      - បង្ហាញខ្ញុំជម្រើស
+      - តើមានអ្វីខ្លះ?
+      - រាយបញ្ជីទាំងអស់
+      - ទាំងអស់
+      - តើអ្នកមានអ្វីខ្លះ?
+      - បញ្ជីរហ័ស?
+      - ផ្តល់ជម្រើសខ្ញុំ
+      - ផលិតផល
+      - រាយបញ្ជីផលិតផល
+      
+  - intent: ask_manufacturer_products_kh
+    examples: |
+      - តើអ្នកមាន [Apple](manufacturer) ទេ?
+      - តើអ្នកមាន [Dell](manufacturer) ទេ?
+      - តើមាន [Apple](manufacturer) ទេ?
+      - តើអ្នកលក់ [Apple](manufacturer) ទេ?
+      - តើផលិតផល [Dell](manufacturer) មាននៅហាងអ្នកទេ?
+      - តើខ្ញុំអាចទិញឧបករណ៍ពី [HP](manufacturer) នៅទីនេះបានទេ?
+      - តើ [Asus](manufacturer) ជាម៉ាករបស់អ្នកទេ?
+      - តើអ្នកមានផលិតផល [Lenovo](manufacturer) នៅក្នុងស្តុកទេ?
+      - តើហាងអ្នកមានផលិតផលពី [Microsoft](manufacturer) ទេ?
+      - តើខ្ញុំអាចទិញកុំព្យូទ័រយួរដៃ [Razer](manufacturer) ពីអ្នកបានទេ?
+      - តើអ្នកលក់ផលិតផលល្បែងពី [Alienware](manufacturer) ទេ?
+      - តើ [Samsung](manufacturer) រួមបញ្ចូលក្នុងម៉ាកដែលអ្នកមានទេ?
+      - តើខ្ញុំអាចទិញកុំព្យូទ័រយួរដៃ [Acer](manufacturer) នៅហាងអ្នកបានទេ?
+      - តើអ្នកលក់ផលិតផលពី [Apple](manufacturer) ទេ?
+      - តើហាងអ្នកមាន [Dell](manufacturer) ទេ?
+      - តើខ្ញុំអាចរកកុំព្យូទ័រយួរដៃ [HP](manufacturer) នៅទីនេះបានទេ?
+      - តើអ្នកផ្តល់ផលិតផលពី [Asus](manufacturer) ទេ?
+      - តើ [Lenovo](manufacturer) ជាម៉ាករបស់អ្នកទេ?
+
+  - intent: ask_category_products_kh
+    examples: |
+      - តើអ្នកលក់ [ultrabook](category) ទេ?
+      - តើអ្នកកំពុងលក់ [notebook](category) ទេ?
+      - តើមាន [ultrabook](category) ទេ?
+      - តើអ្នកមាន [notebook](category) ទេ?
+      - តើអ្នកមាន [Gaming](category) ទេ?
+      - តើអ្នកលក់ [notebook](category) ទេ?
+      - តើមាន [ultrabook](category) ដែលអាចទិញបានទេ?
+      - តើខ្ញុំអាចទិញ [Gaming](category) ពីហាងអ្នកបានទេ?
+      - តើអ្នកមាន [2 in 1 Convertible](category) ទេ?
+      - តើមាន [2-in-1 Convertibles](category) នៅក្នុងស្តុកទេ?
+      - តើហាងអ្នកមាន [Netbook](category) ទេ?
+      - តើអ្នកផ្តល់ [Netbook](category) សម្រាប់អ្នកវិជ្ជាជីវៈទេ?
+      - តើខ្ញុំអាចរក [Ultrabooks](category) នៅទីនេះបានទេ?
+      - តើមានផ្នែកសម្រាប់ [Netbook](category) ទេ?
+      - តើអ្នកលក់ [Ultrabook](category) ទេ?
+      - តើអ្នកមាន [Netbook](category) នៅក្នុងស្តុកទេ?
+      - តើមាន [notebook](category) ដែលអាចទិញបានទេ?
+      - តើហាងអ្នកលក់ [Desktops](category) ទេ?
+      - តើអ្នកមាន [Gaming](category) ទេ?
+      - តើខ្ញុំអាចទិញ [Ultrabooks](category) ពីអ្នកបានទេ?
+
+  - intent: ask_model_name_details_kh
+    examples: |
+      - តើអ្នកមាន [MacBook Air](model_name) ទេ?
+      - តើអ្នកមាន [MacBook Air](model_name) ទេ?
+      - តើអ្នកមាន [Swift 3](model_name) ទេ?
+      - តើអ្នកមាន [250 G6](model_name) ទេ?
+      - តើអ្នកមាន [MacBook Air](model_name) នៅក្នុងស្តុកទេ?
+      - តើ [250 G6](model_name) អាចទិញបានឥឡូវនេះទេ?
+      - តើខ្ញុំអាចទិញ [Swift 3](model_name) ថ្ងៃនេះបានទេ?
+      - តើអ្នកមាន [Inspiron 3567](model_name) ឥឡូវនេះទេ?
+      - តើ [XPS 13](model_name) នៅតែអាចទិញបានទេ?
+      - តើហាងអ្នកមាន [Vivobook E200HA](model_name) ទេ?
+      - តើ [HP Envy x360](model_name) នៅក្នុងស្តុកទេ?
+      - តើខ្ញុំអាចទទួលបាន [Aspire 3](model_name) ពីអ្នកបានទេ?
+      - តើអ្នកមាន [MacBook Pro](model_name) ទេ?
+      - តើ [MacBook Air](model_name) នៅតែលក់ដាច់ទេ?
+      - តើអ្នកមាន [MacBook Air](model_name) នៅក្នុងស្តុកទេ?
+      - តើ [ThinkPad X1](model_name) អាចទិញបានទេ?
+      - តើខ្ញុំអាចទិញ [ROG Zephyrus G14](model_name) ពីអ្នកបានទេ?
+      - តើអ្នកមាន [Surface Pro 9](model_name) ឥឡូវនេះទេ?
+      - តើ [XPS 13](model_name) នៅតែអាចទិញបានទេ?
+
+  - intent: ask_product_by_manufacturer_and_category_kh
+    examples: |
+      - តើអ្នកមាន [Apple](manufacturer) [notebook](category) ទេ?
+      - តើអ្នកមាន [Apple](manufacturer) [notebook](category) ទេ?
+      - តើមាន [Asus](manufacturer) [Ultrabooks](category) ទេ?
+      - តើមាន [Asus](manufacturer) [Ultrabooks](category) ទេ?
+      - តើអ្នកមាន [Apple](manufacturer) [notebook](category) ទេ?
+      - តើ [Dell](manufacturer) [notebook](category) អាចទិញបានទេ?
+      - តើខ្ញុំអាចរក [notebook](category) ពី [dell](manufacturer) នៅហាងអ្នកបានទេ?
+      - តើអ្នកមាន [HP](manufacturer) [ultrabook](category) ទេ?
+      - តើមាន [Asus](manufacturer) [Ultrabooks](category) នៅក្នុងស្តុកទេ?
+      - តើអ្នកលក់ [Apple](manufacturer) [notebook](category) ទេ?
+      - តើ [Dell](manufacturer) [Gaming](category) អាចទិញបានទេ?
+      - តើខ្ញុំអាចរក [Notebook](category) ពី [Acer](manufacturer) នៅហាងអ្នកបានទេ?
+      - តើអ្នកមាន [HP](manufacturer) [Notebook](category) ទេ?
+      - តើមាន [Asus](manufacturer) [Ultrabooks](category) នៅក្នុងស្តុកទេ?
+      - តើអ្នកមាន [Lenovo](manufacturer) [Legion Y520-15IKBN](category) លក់ទេ?
+      - តើមានជម្រើស [Microsoft](manufacturer) [2-in-1 Convertibles](category) ទេ?
+      - តើអ្នកមាន [Acer](manufacturer) [Touchscreen Laptops](category) នៅក្នុងស្តុកទេ?
+      - តើខ្ញុំអាចទិញ [Razer](manufacturer) [Gaming Laptops](category) ពីអ្នកបានទេ?
+      - តើមាន [Alienware](manufacturer) [High-Performance PCs](category) អាចទិញបានទេ?
+
+  - intent: ask_product_by_name_kh
+    examples: |
+      - មាន​ [MacBook Air](model_name) ទេ?
+      - មាន​ [MacBook Air](model_name) ឬអត់?
+      - សុំ [MacBook Air](model_name)
+      - ព័ត៌មានអំពីផលិតផល [MacBook Air](model_name)
+      - ព័ត៌មានផលិតផល [MacBook Air](model_name)
+      - ព័ត៌មានអំពីកុំព្យូទ័រយួរដៃ [MacBook Air](model_name)
+      - ព័ត៌មានកុំព្យូទ័រយួរដៃ [MacBook Air](model_name)
+      - ខ្ញុំចង់ដឹងព័ត៌មានអំពីផលិតផលនេះ [MacBook Air](model_name)
+      - ប្រាប់ខ្ញុំព័ត៌មានអំពីផលិតផលនេះ [MacBook Air](model_name)
+      - ព័ត៌មានអំពីផលិតផលនេះ [MacBook Air](model_name)
+      - ពិនិត្យមើលថាតើអ្នកមាន [Apple](manufacturer) [Macbook Pro](model_name) ដែលជា [ultrabook](category) និង cpu [Intel Core i7 2.7GHz](cpu) ទេ?
+      - បង្ហាញខ្ញុំ [HP](manufacturer) [250 G6](model_name) ដែលជា [notebook](category) និង cpu [Intel Core i5 7200U 2.5GHz](cpu)
+      - ពិនិត្យមើលថាតើអ្នកមាន [Apple](manufacturer) [Macbook Pro](model_name) ជាមួយ cpu [Intel Core i7 2.7GHz](cpu) ទេ?
+      - បង្ហាញខ្ញុំ [HP](manufacturer) [250 G6](model_name) ជាមួយ cpu [Intel Core i5 7200U 2.5GHz](cpu)
+      - បង្ហាញខ្ញុំ [Inspiron 3567](model_name) ជាមួយ [4GB](ram) និង [256GB SSD](storage) SSD
+      - រក [Inspiron 3567](model_name) ជាមួយ [4gb](ram) និង [256gb](storage) SSD
+      - ខ្ញុំត្រូវការ [Lenovo](manufacturer) [Legion Y520-15IKBN](model_name) ជាមួយ [8GB](ram) និង [128GB SSD + 1TB HDD](storage)
+      - តើអ្នកអាចរក [Lenovo](manufacturer) [Legion Y520-15IKBN](model_name) ជាមួយ [8GB](ram) និង [128GB SSD + 1TB HDD](storage) បានទេ?
+      - តើអ្នកមាន [MacBook Pro](model_name) ជាមួយ [8GB](ram) និង [128GB SSD](storage) SSD ទេ?
+      - តើអ្នកមាន [MacBook Pro](model_name) ជាមួយ [8GB](ram) និង [128GB SSD](storage) ទេ?
+      - ខ្ញុំកំពុងរក [MacBook Pro](model_name) ជាមួយ [16GB](ram)
+      - ខ្ញុំចង់បាន [MacBook Pro](model_name) ជាមួយ [8GB](ram)
+      - តើ [250 G6](model_name) ពី [HP](manufacturer) អាចទិញបានទេ?
+      - ផ្តល់ខ្ញុំនូវលក្ខណៈបច្ចេកទេសនៃ [250 G6](model_name) ពី [HP](manufacturer)
+      - តើមានព័ត៌មានអ្វីអំពី [EliteBook 840 G9](model_name) ពី [HP](manufacturer) ទេ?
+      - ខ្ញុំត្រូវការដឹងអំពី [Precision 5570](model_name) ពី [Dell](manufacturer)
+      - បង្ហាញខ្ញុំ [Dell](manufacturer) [Inspiron 3567](model_name) ម៉ូដែល
+      - តើអ្នកអាចរក [IdeaPad 320-15IKB](model_name) បានទេ?
+      - ប្រាប់ខ្ញុំអំពី [MacBook Pro](model_name)
+      - ខ្ញុំកំពុងរក [Dell](manufacturer) [Inspiron 3567](model_name)
+      - តើ [Acer](manufacturer) [Swift 3](model_name) មានលក្ខណៈដូចម្តេច?
+      - ខ្ញុំចង់បាន [Asus](manufacturer) [ZenBook UX430UN](model_name)
+      - រកខ្ញុំ [Acer](manufacturer) [Aspire 3](model_name)
+      - ខ្ញុំត្រូវការ [Dell](manufacturer) [XPS 13](model_name)
+      - តើអ្នកមាន [HP](manufacturer) [250 G6](model_name) ទេ?
+      - រកខ្ញុំ [Asus](manufacturer) [Vivobook E200HA](model_name)
+      - បង្ហាញខ្ញុំ [Dell](manufacturer) [Inspiron 3567](model_name)
+      - រកខ្ញុំ [Lenovo](manufacturer) [IdeaPad 120S-14IAP](model_name)
+      - តើអ្នកមាន [Asus](manufacturer) [X540UA-DM186](model_name) ទេ?
+      - តើអ្នកអាចរក [Acer](manufacturer) [Aspire A515-51G](model_name) បានទេ?
+      - ខ្ញុំកំពុងរក [Asus](manufacturer) [X542UQ-GO005](model_name)
+      - ខ្ញុំកំពុងរក [MacBook Pro](model_name)
+      - បង្ហាញខ្ញុំ [Apple](manufacturer) កុំព្យូទ័រយួរដៃជាមួយ [Intel Core i7](cpu)
+      - រក [MacBook Pro](model_name) ជាមួយ [16GB](ram) RAM និង [512GB](storage) SSD
+      - ខ្ញុំចង់បាន [MacBook Air](model_name) ជាមួយ [Intel Core i5](cpu) និង [256GB](storage) ឃ្លាំង
+      - តើមានអ្វីអំពី [Apple](manufacturer) កុំព្យូទ័រយួរដៃជាមួយ [Intel Core i7](cpu) ទេ?
+      - អំពី [MacBook Pro](model_name) ជាមួយ [16GB](ram) RAM និង [512GB](storage) SSD
+      - អំពី [MacBook Air](model_name) ជាមួយ [Intel Core i5](cpu) និង [256GB](storage) ឃ្លាំង
+      - តើមានអ្វីស្រដៀងនឹង [MacBook Air](model_name) ជាមួយ [Intel Core i5](cpu) និង [256GB](storage) ឃ្លាំងទេ?
+      - តើមាន [Apple](manufacturer) កុំព្យូទ័រយួរដៃជាមួយ [Intel Core i7](cpu) ទេ?
+      - [MacBook Pro](model_name) ជាមួយ [16GB](ram) RAM និង [512GB](storage) SSD
+      - [Aspire 3](model_name) ជាមួយ [AMD A9-Series 9420 3GHz](cpu) និង [500GB HDD](storage) ឃ្លាំង
+      - តើអ្នកមាន [HP](manufacturer) [250 G6](model_name) ដែលជា [Notebook](category) និង cpu [Intel Core i5 7200U 2.5GHz](cpu) ទេ?
+      - តើអ្នកមាន [Apple](manufacturer) [Macbook Pro](model_name) ដែលជា [Ultrabook](category) និង cpu [Intel Core i7 2.7GHz](cpu) ទេ?
+      - តើអ្នកមាន [HP](manufacturer) [250 G6](model_name) ដែលជា [Notebook](category) និង cpu [Intel Core i5 7200U 2.5GHz](cpu) ទេ?
+      - តើអ្នកមាន [Apple](manufacturer) [Macbook Pro](model_name) ដែលជា [Ultrabook](category) និង cpu [Intel Core i7 2.7GHz](cpu) ទេ?
+      - តើអ្នកអាចពិនិត្យមើលថាតើអ្នកមាន [Apple](manufacturer) [Macbook Pro](model_name) ដែលជា [ultrabook](category) និង cpu [Intel Core i7 2.7GHz](cpu) ទេ?
+      - តើអ្នកមាន [Apple](manufacturer) [Macbook Pro](model_name) ដែលជា [Ultrabook](category) និង cpu [Intel Core i7 2.7GHz](cpu) ទេ?
+      - តើអ្នកអាចពិនិត្យមើលថាតើអ្នកមាន [Apple](manufacturer) [Macbook Pro](model_name) ជាមួយ cpu [Intel Core i7 2.7GHz](cpu) ទេ?
+      - តើអ្នកមាន [Apple](manufacturer) [Macbook Pro](model_name) ជាមួយ cpu [Intel Core i7 2.7GHz](cpu) ទេ?
+      - តើអ្នកមាន [Apple](manufacturer) [Macbook Pro](model_name) ជាមួយ cpu [Intel Core i7 2.7GHz](cpu) ទេ?
+      - តើអ្នកមាន [HP](manufacturer) [250 G6](model_name) ជាមួយ cpu [Intel Core i5 7200U 2.5GHz](cpu) ទេ?
+      - តើអ្នកមាន [MacBook Air](model_name) ជាមួយ [8GB](ram) RAM ទេ?
+      - តើ [MacBook Air](model_name) ពី [Apple](manufacturer) អាចទិញបាននៅក្នុង [Laptops](category) ទេ?
+      - តើអ្នកមាន [ThinkPad X1](model_name) ពី [Lenovo](manufacturer) នៅក្នុងផ្នែក [Business Laptop](category) ទេ?
+      - តើខ្ញុំអាចទទួលបាន [ROG Zephyrus G14](model_name) [Gaming Laptop](category) ពី [Asus](manufacturer) ទេ?
+      - តើ [Dell XPS 13](model_name) អាចទិញបានជាមួយ [Intel i7](cpu) ទេ?
+      - តើអ្នកផ្តល់ [HP Spectre x360](model_name) ជាមួយ [16GB RAM](ram) ទេ?
+      - តើខ្ញុំអាចទិញ [MacBook Pro](model_name) ជាមួយ [M3 Chip](cpu) ពីហាងអ្នកបានទេ?
+      - តើ [Microsoft Surface Laptop 5](model_name) អាចទិញបាននៅក្នុងប្រភេទ [Touchscreen Laptop](category) ទេ?
+      - តើអ្នកមាន [Razer Blade 15](model_name) [Gaming Laptop](category) ជាមួយ [32GB RAM](ram) ទេ?
+      - តើ [Acer Swift 5](model_name) មកជាមួយ [Intel i5](cpu) ទេ?
+      - តើខ្ញុំអាចរក [Alienware m16](model_name) ពី [Dell](manufacturer) នៅក្នុងផ្នែក [Gaming Laptop](category) បានទេ?
+      - តើអ្នកមាន [MacBook Air](model_name) ពី [Apple](manufacturer) នៅក្នុងប្រភេទ [Laptop](category) ទេ?
+      - តើ [MacBook Air](model_name) អាចទិញបានពី [Apple](manufacturer) ក្រោម [Laptop](category) ទេ?
+      - តើខ្ញុំអាចទទួលបាន [MacBook Air](model_name) [Laptop](category) ពី [Apple](manufacturer) ជាមួយ [M2 Chip](cpu) ទេ?
+      - តើអ្នកលក់ [MacBook Air](model_name) ជាមួយ [16GB](ram) RAM ទេ?
+
+  - intent: ask_product_by_common_name_kh
+    examples: |
+      - មាន​ [MacBook](common_name) ទេ?
+      - មាន​ [MacBook](common_name) ឬអត់?
+      - សុំ [MacBook](common_name)
+      - ព័ត៌មានអំពីផលិតផល [MacBook](common_name)
+      - ព័ត៌មានផលិតផល [MacBook](common_name)
+      - ព័ត៌មានអំពីកុំព្យូទ័រយួរដៃ [MacBook](common_name)
+      - ព័ត៌មានកុំព្យូទ័រយួរដៃ [MacBook](common_name)
+      - ខ្ញុំចង់ដឹងព័ត៌មានអំពីផលិតផលនេះ [MacBook](common_name)
+      - ប្រាប់ខ្ញុំព័ត៌មានអំពីផលិតផលនេះ [MacBook](common_name)
+      - ព័ត៌មានអំពីផលិតផលនេះ [MacBook](common_name)
+      - ពិនិត្យមើលថាតើអ្នកមាន [Apple](manufacturer) [Macbook](common_name) ដែលជា [ultrabook](category) និង cpu [Intel Core i7 2.7GHz](cpu) ទេ?
+      - បង្ហាញខ្ញុំ [HP](manufacturer) [ProBook](common_name) ដែលជា [notebook](category) និង cpu [Intel Core i5 7200U 2.5GHz](cpu)
+      - ពិនិត្យមើលថាតើអ្នកមាន [Apple](manufacturer) [Macbook](common_name) ជាមួយ cpu [Intel Core i7 2.7GHz](cpu) ទេ?
+      - បង្ហាញខ្ញុំ [HP](manufacturer) [ProBook](common_name) ជាមួយ cpu [Intel Core i5 7200U 2.5GHz](cpu)
+      - បង្ហាញខ្ញុំ [Inspiron](common_name) ជាមួយ [4GB](ram) និង [256GB SSD](storage) SSD
+      - រក [Inspiron](common_name) ជាមួយ [4gb](ram) និង [256gb](storage) SSD
+      - ខ្ញុំត្រូវការ [Lenovo](manufacturer) [Legion](common_name) ជាមួយ [8GB](ram) និង [128GB SSD + 1TB HDD](storage)
+      - តើអ្នកអាចរក [Lenovo](manufacturer) [Legion](common_name) ជាមួយ [8GB](ram) និង [128GB SSD + 1TB HDD](storage) បានទេ?
+      - តើអ្នកមាន [MacBook](common_name) ជាមួយ [8GB](ram) និង [128GB SSD](storage) SSD ទេ?
+      - តើអ្នកមាន [MacBook](common_name) ជាមួយ [8GB](ram) និង [128GB SSD](storage) ទេ?
+      - ខ្ញុំកំពុងរក [MacBook](common_name) ជាមួយ [16GB](ram)
+      - ខ្ញុំចង់បាន [MacBook](common_name) ជាមួយ [8GB](ram)
+      - តើ [ProBook](common_name) ពី [HP](manufacturer) អាចទិញបានទេ?
+      - ផ្តល់ខ្ញុំនូវលក្ខណៈបច្ចេកទេសនៃ [ProBook](common_name) ពី [HP](manufacturer)
+      - តើមានព័ត៌មានអ្វីអំពី [EliteBook](common_name) ពី [HP](manufacturer) ទេ?
+      - ខ្ញុំត្រូវការដឹងអំពី [Precision](common_name) ពី [Dell](manufacturer)
+      - បង្ហាញខ្ញុំ [Dell](manufacturer) [Inspiron](common_name) ម៉ូដែល
+      - តើអ្នកអាចរក [IdeaPad](common_name) បានទេ?
+      - ប្រាប់ខ្ញុំអំពី [MacBook](common_name)
+      - ខ្ញុំកំពុងរក [Dell](manufacturer) [Inspiron](common_name)
+      - តើ [Acer](manufacturer) [Swift](common_name) មានលក្ខណៈដូចម្តេច?
+      - ខ្ញុំចង់បាន [Asus](manufacturer) [ZenBook](common_name)
+      - រកខ្ញុំ [Acer](manufacturer) [Aspire](common_name)
+      - ខ្ញុំត្រូវការ [Dell](manufacturer) [XPS](common_name)
+      - តើអ្នកមាន [HP](manufacturer) [ProBook](common_name) ទេ?
+      - រកខ្ញុំ [Asus](manufacturer) [Vivobook](common_name)
+      - បង្ហាញខ្ញុំ [Dell](manufacturer) [Inspiron](common_name)
+      - រកខ្ញុំ [Lenovo](manufacturer) [Legion](common_name)
+      - តើអ្នកមាន [Asus](manufacturer) [ROG](common_name) ទេ?
+      - តើអ្នកអាចរក [Acer](manufacturer) [Aspire](common_name) បានទេ?
+      - ខ្ញុំកំពុងរក [Asus](manufacturer) [ROG](common_name)
+      - ខ្ញុំកំពុងរក [MacBook](common_name)
+      - រក [MacBook](common_name) ជាមួយ [16GB](ram) RAM និង [512GB](storage) SSD
+      - ខ្ញុំចង់បាន [MacBook](common_name) ជាមួយ [Intel Core i5](cpu) និង [256GB](storage) ឃ្លាំង
+      - អំពី [MacBook](common_name) ជាមួយ [16GB](ram) RAM និង [512GB](storage) SSD
+      - អំពី [MacBook](common_name) ជាមួយ [Intel Core i5](cpu) និង [256GB](storage) ឃ្លាំង
+      - តើមានអ្វីស្រដៀងនឹង [MacBook](common_name) ជាមួយ [Intel Core i5](cpu) និង [256GB](storage) ឃ្លាំងទេ?
+      - [MacBook](common_name) ជាមួយ [16GB](ram) RAM និង [512GB](storage) SSD
+      - [Aspire](common_name) ជាមួយ [AMD A9-Series 9420 3GHz](cpu) និង [500GB HDD](storage) ឃ្លាំង
+      - តើអ្នកមាន [HP](manufacturer) [ProBook](common_name) ដែលជា [Notebook](category) និង cpu [Intel Core i5 7200U 2.5GHz](cpu) ទេ?
+      - តើអ្នកមាន [Apple](manufacturer) [Macbook](common_name) ដែលជា [Ultrabook](category) និង cpu [Intel Core i7 2.7GHz](cpu) ទេ?
+      - តើអ្នកមាន [HP](manufacturer) [ROG](common_name) ដែលជា [Notebook](category) និង cpu [Intel Core i5 7200U 2.5GHz](cpu) ទេ?
+      - តើអ្នកមាន [Apple](manufacturer) [Macbook](common_name) ដែលជា [Ultrabook](category) និង cpu [Intel Core i7 2.7GHz](cpu) ទេ?
+      - តើអ្នកអាចពិនិត្យមើលថាតើអ្នកមាន [Apple](manufacturer) [Macbook](common_name) ដែលជា [ultrabook](category) និង cpu [Intel Core i7 2.7GHz](cpu) ទេ?
+      - តើអ្នកមាន [Apple](manufacturer) [Macbook](common_name) ដែលជា [Ultrabook](category) និង cpu [Intel Core i7 2.7GHz](cpu) ទេ?
+      - តើអ្នកអាចពិនិត្យមើលថាតើអ្នកមាន [Apple](manufacturer) [Macbook](common_name) ជាមួយ cpu [Intel Core i7 2.7GHz](cpu) ទេ?
+      - តើអ្នកមាន [Apple](manufacturer) [Macbook](common_name) ជាមួយ cpu [Intel Core i7 2.7GHz](cpu) ទេ?
+      - តើអ្នកមាន [Apple](manufacturer) [Macbook](common_name) ជាមួយ cpu [Intel Core i7 2.7GHz](cpu) ទេ?
+      - តើអ្នកមាន [HP](manufacturer) [ROG](common_name) ជាមួយ cpu [Intel Core i5 7200U 2.5GHz](cpu) ទេ?
+      - តើអ្នកមាន [MacBook](common_name) ជាមួយ [8GB](ram) RAM ទេ?
+      - តើ [MacBook](common_name) ពី [Apple](manufacturer) អាចទិញបាននៅក្នុង [Laptops](category) ទេ?
+      - តើអ្នកមាន [ThinkPad](common_name) ពី [Lenovo](manufacturer) នៅក្នុងផ្នែក [Business Laptop](category) ទេ?
+      - តើខ្ញុំអាចទទួលបាន [ROG](common_name) [Gaming Laptop](category) ពី [Asus](manufacturer) ទេ?
+      - តើ [XPS](common_name) អាចទិញបានជាមួយ [Intel i7](cpu) ទេ?
+      - តើអ្នកផ្តល់ [Spectre](common_name) ជាមួយ [16GB RAM](ram) ទេ?
+      - តើខ្ញុំអាចទិញ [MacBook](common_name) ជាមួយ [M3 Chip](cpu) ពីហាងអ្នកបានទេ?
+      - តើ [Microsoft Surface](common_name) អាចទិញបាននៅក្នុងប្រភេទ [Touchscreen Laptop](category) ទេ?
+      - តើអ្នកមាន [Razer Blade](common_name) [Gaming Laptop](category) ជាមួយ [32GB RAM](ram) ទេ?
+      - តើ [Swift](common_name) មកជាមួយ [Intel i5](cpu) ទេ?
+      - តើខ្ញុំអាចរក [Alienware](common_name) ពី [Dell](manufacturer) នៅក្នុងផ្នែក [Gaming Laptop](category) បានទេ?
+      - តើអ្នកមាន [MacBook](common_name) ពី [Apple](manufacturer) នៅក្នុងប្រភេទ [Laptop](category) ទេ?
+      - តើ [MacBook](common_name) អាចទិញបានពី [Apple](manufacturer) ក្រោម [Laptop](category) ទេ?
+      - តើខ្ញុំអាចទទួលបាន [MacBook](common_name) [Laptop](category) ពី [Apple](manufacturer) ជាមួយ [M2 Chip](cpu) ទេ?
+      - តើអ្នកលក់ [MacBook](common_name) ជាមួយ [16GB](ram) RAM ទេ?
+      
+  - intent: ask_product_price_kh
+    examples: |
+      - តម្លៃកុំព្យូទ័រយួរដៃ [Inspiron 3567](model_name)
+      - តម្លៃ [Inspiron 3567](model_name)
+      - តម្លៃរបស់ [Inspiron 3567](model_name)
+      - តើ [Inspiron 3567](model_name) ជាមួយ [Intel Core i3 6006U 2GHz](cpu), [4GB](ram) និង [256GB SSD](storage) SSD មានតម្លៃប៉ុន្មាន?
+      - រកតម្លៃ [Inspiron 3567](model_name) ជាមួយ [Intel Core i3 6006U 2GHz](cpu), [4gb](ram) និង [256gb](storage) SSD
+      - ប្រាប់ខ្ញុំពីតម្លៃនៃ [Legion Y520-15IKBN](model_name) ជាមួយ [Intel Core i5 7300HQ 2.5GHz](cpu), [8GB](ram) និង [128GB SSD + 1TB HDD](storage)
+      - តើអ្នកអាចរកតម្លៃ [Legion Y520-15IKBN](model_name) ជាមួយ [Intel Core i5 7300HQ 2.5GHz](cpu), [8GB](ram) និង [128GB SSD + 1TB HDD](storage) សម្រាប់ខ្ញុំបានទេ?
+      - តើមានតម្លៃអ្វីខ្លះសម្រាប់ [MacBook Pro](model_name) ជាមួយ [Intel Core i7 2.7GHz](cpu), [8GB](ram) និង [128GB SSD](storage) SSD?
+      - តើអ្នកមានតម្លៃ [MacBook Pro](model_name) ជាមួយ [Intel Core i7 2.7GHz](cpu), [8GB](ram) និង [128GB SSD](storage) ទេ?
+      - តើ [Macbook Pro](model_name) ជាមួយ cpu [Intel Core i7 2.7GHz](cpu) មានតម្លៃប៉ុន្មាន?
+      - តម្លៃរបស់ [Macbook Pro](model_name) ជាមួយ cpu [Intel Core i7 2.7GHz](cpu)
+      - បង្ហាញខ្ញុំពីតម្លៃនៃ [250 G6](model_name) ជាមួយ cpu [Intel Core i5 7200U 2.5GHz](cpu)
+      - តម្លៃនៃ [250 G6](model_name) ជាមួយ cpu [Intel Core i5 7200U 2.5GHz](cpu)
+      - តើ [Inspiron 3567](model_name) ជាមួយ [4GB](ram) និង [256GB SSD](storage) SSD មានតម្លៃប៉ុន្មាន?
+      - រកតម្លៃនៃ [Inspiron 3567](model_name) ជាមួយ [4gb](ram) និង [256gb](storage) SSD
+      - ប្រាប់ខ្ញុំពីតម្លៃនៃ [Legion Y520-15IKBN](model_name) ជាមួយ [8GB](ram) និង [128GB SSD + 1TB HDD](storage)
+      - តើអ្នកអាចរកតម្លៃ [Legion Y520-15IKBN](model_name) ជាមួយ [8GB](ram) និង [128GB SSD + 1TB HDD](storage) សម្រាប់ខ្ញុំបានទេ?
+      - តើមានតម្លៃអ្វីខ្លះសម្រាប់ [MacBook Pro](model_name) ជាមួយ [8GB](ram) និង [128GB SSD](storage) SSD?
+      - តើអ្នកមានតម្លៃ [MacBook Pro](model_name) ជាមួយ [8GB](ram) និង [128GB SSD](storage) ទេ?
+      - ខ្ញុំកំពុងរកតម្លៃនៃ [MacBook Pro](model_name) ជាមួយ [16GB](ram)
+      - តើ [MacBook Pro](model_name) ជាមួយ [8GB](ram) មានតម្លៃប៉ុន្មាន?
+      - តើអ្នកអាចប្រាប់ខ្ញុំពីតម្លៃនៃ [MacBook Pro](model_name) ជាមួយ [16GB](ram) RAM និង [512GB](storage) SSD បានទេ?
+      - តើតម្លៃនៃ [MacBook Air](model_name) ជាមួយ [Intel Core i5](cpu) និង [256GB](storage) ឃ្លាំងគឺប៉ុន្មាន?
+      - តើតម្លៃលក់រាយនៃ [MacBook Air](model_name) ជាមួយ [Intel Core i5](cpu) និង [256GB](storage) ឃ្លាំងគឺប៉ុន្មាន?
+      - តើ [MacBook Air](model_name) កុំព្យូទ័រយួរដៃជាមួយ [Intel Core i7](cpu) មានតម្លៃប៉ុន្មាន?
+      - តម្លៃនៃ [MacBook Pro](model_name) ជាមួយ [16GB](ram) RAM និង [512GB](storage) SSD
+      - តម្លៃ [Aspire 3](model_name) ជាមួយ [AMD A9-Series 9420 3GHz](cpu) និង [500GB HDD](storage) ឃ្លាំង
+      - តើ [Aspire 3](model_name) មានតម្លៃប៉ុន្មាន?
+      - តើ [MacBook Pro](model_name) មានតម្លៃប៉ុន្មាន?
+      - តម្លៃនៃ [MacBook Pro](model_name)
+      - ខ្ញុំចង់ដឹងពីតម្លៃនៃ [MacBook Pro](model_name)
+      - ប្រាប់ខ្ញុំពីតម្លៃនៃកុំព្យូទ័រយួរដៃនេះ [MacBook Pro](model_name)
+      - តម្លៃនៃកុំព្យូទ័រយួរដៃនេះ [MacBook Pro](model_name)
+      - តើតម្លៃនៃ [Inspiron 3567](model_name) គឺប៉ុន្មាន?
+      - តើអ្នកអាចប្រាប់ខ្ញុំពីតម្លៃនៃ [MacBook Air](model_name) បានទេ?
+      - តើ [MacBook Air](model_name) កំពុងលក់ក្នុងតម្លៃប៉ុន្មាន?
+      - តើតម្លៃបច្ចុប្បន្ននៃ [MacBook Pro](model_name) គឺប៉ុន្មាន?
+      - តើខ្ញុំត្រូវបង់ប៉ុន្មានសម្រាប់ [Aspire 3](model_name)?
+      - តើតម្លៃនៃ [Inspiron 3567](model_name) គឺប៉ុន្មាន?
+      - តើអ្នកអាចផ្តល់ឱ្យខ្ញុំនូវតម្លៃចុងក្រោយបំផុតនៃ [Inspiron 3567](model_name) បានទេ?
+      - តើ [Inspiron 3567](model_name) មានតម្លៃប៉ុន្មាន?
+      - តើជួរតម្លៃសម្រាប់ [MacBook Pro](model_name) គឺប៉ុន្មាន?
+      - តើ [MacBook Pro](model_name) មានតម្លៃប៉ុន្មានជាដុល្លារ?
+      - តើតម្លៃនៃ [MacBook Pro](model_name) នៅក្នុងហាងអ្នកគឺប៉ុន្មាន?
+      - តើអ្នកអាចប្រាប់ខ្ញុំពីតម្លៃនៃ [MacBook Pro](model_name) ឥឡូវនេះបានទេ?
+      - តើវានឹងមានតម្លៃប៉ុន្មានដើម្បីទិញ [MacBook Pro](model_name)?
+      - តើតម្លៃលក់រាយនៃ [MacBook Pro](model_name) គឺប៉ុន្មាន?
+      - តើ [MacBook Pro](model_name) មានតម្លៃប៉ុន្មានបើប្រៀបធៀបទៅនឹងម៉ូដែលផ្សេងទៀត?
+      - តើតម្លៃសម្រាប់ [MacBook Pro](model_name) ចុងក្រោយបំផុតគឺប៉ុន្មាន?
+      - តើ [MacBook Pro](model_name) មានតម្លៃប៉ុន្មានដោយរួមបញ្ចូលការដឹកជញ្ជូន?
+      - តើតម្លៃចុងក្រោយសម្រាប់ [MacBook Pro](model_name) បន្ទាប់ពីគ្រប់ថ្លៃដើមទាំងអស់គឺប៉ុន្មាន?
+
+  - intent: ask_product_exact_price_kh
+    examples: |
+      - កុំព្យូទ័រ [1000.00](price)$
+      - កុំព្យូទ័រយួរដៃ [1000.00](price) ដុល្លារ
+      - ផលិតផល [1000.00](price)$
+      - ផលិតផល [1000.00](price) ដុល្លារ
+      - តើមានអ្វីខ្លះសម្រាប់ [2000.0](price) ដុល្លារ?
+      - តើមានអ្វីខ្លះជាមួយ [2000](price) ដុល្លារ?
+      - តើអ្នកមានកុំព្យូទ័រយួរដៃដែលមានតម្លៃ [2000.00](price) ដុល្លារទេ?
+      - ផ្តល់ឱ្យខ្ញុំនូវកុំព្យូទ័រយួរដៃដែលមានតម្លៃ [500.00 ដុល្លារ](price)
+      - បង្ហាញខ្ញុំនូវកុំព្យូទ័រយួរដៃដែលមានតម្លៃ [1339.69 ដុល្លារ](price)
+      - តើអ្នកអាចរកផលិតផលដែលមានតម្លៃ [1500.00](price) បានទេ?
+      - បង្ហាញខ្ញុំនូវកុំព្យូទ័រយួរដៃដែលមានតម្លៃ [1200.15 ដុល្លារ](price)
+      - រកផលិតផលដែលមានតម្លៃ [800.50](price)
+      - តើអ្នកអាចបង្ហាញខ្ញុំនូវកុំព្យូទ័រយួរដៃដែលមានតម្លៃ [1000 ដុល្លារ](price) បានទេ?
+      - តើកុំព្យូទ័រយួរដៃណាខ្លះដែលមានតម្លៃ [500](price)?
+      - តើផលិតផលណាខ្លះដែលអាចទិញបានក្នុងតម្លៃ [700 ដុល្លារ](price)?
+      - ខ្ញុំចង់បានផលិតផលដែលមានតម្លៃ [1200](price)
+      - រកខ្ញុំនូវកុំព្យូទ័រយួរដៃដែលមានតម្លៃ [800 ដុល្លារ](price)
+      - បង្ហាញខ្ញុំនូវផលិតផលដែលមានតម្លៃ [1000 ដុល្លារ](price)
+      - រាយខ្ញុំនូវផលិតផលដែលមានតម្លៃ [500 ដុល្លារ](price)
+      - តើខ្ញុំអាចទិញកុំព្យូទ័រយួរដៃក្នុងតម្លៃ [2000](price) ដុល្លារបានទេ?
+      - បង្ហាញខ្ញុំនូវផលិតផលដែលមានតម្លៃ [1500 ដុល្លារ](price)
+      - បង្ហាញខ្ញុំនូវកុំព្យូទ័រយួរដៃដែលមានតម្លៃ [500 ដុល្លារ](price)
+      - រកខ្ញុំនូវផលិតផលដែលមានតម្លៃ [1000 ដុល្លារ](price)
+      - តើអ្នកអាចបង្ហាញខ្ញុំនូវកុំព្យូទ័រយួរដៃក្នុងតម្លៃ [2000](price) បានទេ?
+      - ខ្ញុំចង់ទិញផលិតផលដែលមានតម្លៃ [750](price)
+      - តើកុំព្យូទ័រយួរដៃណាខ្លះដែលអ្នកមានក្នុងតម្លៃ [1200.99 ដុល្លារ](price)?
+      - បង្ហាញខ្ញុំនូវផលិតផលដែលមានតម្លៃ [300](price)
+      - តើអ្នកមានផលិតផលណាមួយក្នុងតម្លៃ [1500.15](price) ទេ?
+      - រកខ្ញុំនូវកុំព្យូទ័រយួរដៃក្នុងតម្លៃ [1000 ដុល្លារ](price)
+      - តើអ្នកអាចផ្តល់ឱ្យខ្ញុំនូវកុំព្យូទ័រយួរដៃដែលមានតម្លៃ [800](price) បានទេ?
+      - ខ្ញុំកំពុងរកផលិតផលដែលមានតម្លៃ [1200 ដុល្លារ](price)
+      - បង្ហាញខ្ញុំនូវកុំព្យូទ័រយួរដៃដែលមានតម្លៃ [1000.59](price)
+      - តើអ្នកមានអ្វីខ្លះក្នុងតម្លៃ [1500](price) ទេ?
+      - តើអ្នកអាចរកកុំព្យូទ័រយួរដៃដែលមានតម្លៃ [2500](price) បានទេ?
+      - តើខ្ញុំអាចទិញផលិតផលក្នុងតម្លៃ [600 ដុល្លារ](price) បានទេ?
+      - ផ្តល់ឱ្យខ្ញុំនូវផលិតផលដែលមានតម្លៃ [900](price)
+      - រាយខ្ញុំនូវកុំព្យូទ័រយួរដៃដែលមានតម្លៃ [400.44](price)
+      - តើផលិតផលណាខ្លះដែលមានតម្លៃ [1100.80 ដុល្លារ](price)?
+      - រកខ្ញុំនូវផលិតផលក្នុងតម្លៃ [2000](price) ដុល្លារ
+      - កុំព្យូទ័រយួរដៃដែលមានតម្លៃ [500.99](price) ដុល្លារ
+      - ផលិតផលដែលមានតម្លៃ [400](price) ដុល្លារនៅក្នុងហាង
+      - កុំព្យូទ័រយួរដៃដែលមានតម្លៃ [500.99](price) ដុល្លារ
+      - ផលិតផលដែលមានតម្លៃ [400.0](price) ដុល្លារនៅក្នុងហាង
+      - ផលិតផលដែលមានតម្លៃ [400.30](price) ដុល្លារនៅក្នុងហាង
+      - តើអ្នកអាចរកផលិតផលក្នុងតម្លៃ [200](price) ដុល្លារសម្រាប់ខ្ញុំបានទេ?
+      - កុំព្យូទ័រយួរដៃក្នុងតម្លៃ [1500](price) ដុល្លារ
+      - កុំព្យូទ័រយួរដៃ [200.99](price) ដុល្លារ
+      - តើកុំព្យូទ័រយួរដៃណាខ្លះដែលអាចទិញបានក្នុងតម្លៃ [500](price)?
+      - កុំព្យូទ័រយួរដៃ [Apple](manufacturer) ក្នុងតម្លៃ [200.99](price) ដុល្លារ
+      - កុំព្យូទ័រយួរដៃ [Apple](manufacturer) ដែលមានតម្លៃ [2000.99](price) ដុល្លារ
+      - កុំព្យូទ័រយួរដៃ [HP](manufacturer) ដែលមានតម្លៃ [2000.99](price) ដុល្លារ
+      - តើអ្នកមានកុំព្យូទ័រយួរដៃ [Lenovo](manufacturer) ក្នុងតម្លៃ [1000.99](price) ទេ?
+      - តើអ្នកមានកុំព្យូទ័រយួរដៃ [Lenovo](manufacturer) ក្នុងតម្លៃ [1000.99](price) ដុល្លារទេ?
+      - តើមានអ្វីខ្លះសម្រាប់ [apple](manufacturer) ក្នុងតម្លៃ [2000.67](price) ដុល្លារ?
+      - តើមានអ្វីខ្លះសម្រាប់ [apple](manufacturer) ក្នុងតម្លៃ [2000.0](price)?
+      - តើអ្នកមានផលិតផល [apple](manufacturer) ក្នុងតម្លៃ [1200](price) ដុល្លារទេ?
+      - កុំព្យូទ័រយួរដៃ [Notebook](category) ក្នុងតម្លៃ [200.99](price) ដុល្លារ
+      - កុំព្យូទ័រយួរដៃ [Notebook](category) ដែលមានតម្លៃ [2000.99](price) ដុល្លារ
+      - កុំព្យូទ័រយួរដៃ [Ultrabook](category) ដែលមានតម្លៃ [2000.99](price) ដុល្លារ
+      - តើអ្នកមានកុំព្យូទ័រយួរដៃ [notebook](category) ក្នុងតម្លៃ [1000.99](price) ទេ?
+      - តើអ្នកមានកុំព្យូទ័រយួរដៃ [ultrabook](category) ក្នុងតម្លៃ [1000.99](price) ដុល្លារទេ?
+      - តើមានអ្វីខ្លះសម្រាប់ [ultrabook](category) ក្នុងតម្លៃ [2000.67](price) ដុល្លារ?
+      - តើមានអ្វីខ្លះសម្រាប់ [notebook](category) ក្នុងតម្លៃ [2000.0](price)?
+      - តើអ្នកមានផលិតផល [2 in 1 Convertible](category) ក្នុងតម្លៃ [1200](price) ដុល្លារទេ?
+      - កុំព្យូទ័រយួរដៃ [Apple](manufacturer) [Notebook](category) ក្នុងតម្លៃ [200.99](price) ដុល្លារ
+      - កុំព្យូទ័រយួរដៃ [Apple](manufacturer) [Notebook](category) ដែលមានតម្លៃ [2000.99](price) ដុល្លារ
+      - កុំព្យូទ័រយួរដៃ [HP](manufacturer) ដែលមានតម្លៃ [2000.99](price) ដុល្លារ
+      - តើអ្នកមានកុំព្យូទ័រយួរដៃ [Lenovo](manufacturer) [ultrabook](category) ក្នុងតម្លៃ [1000.99](price) ទេ?
+      - តើអ្នកមានកុំព្យូទ័រយួរដៃ [Lenovo](manufacturer) [Ultrabook](category) ក្នុងតម្លៃ [1000.99](price) ដុល្លារទេ?
+      - តើមានអ្វីខ្លះសម្រាប់ [apple](manufacturer) [notebook](category) ក្នុងតម្លៃ [2000.67](price) ដុល្លារ?
+      - តើមានអ្វីខ្លះសម្រាប់ [apple](manufacturer) [notebook](category) ក្នុងតម្លៃ [2000.0](price)?
+      - តើអ្នកមានផលិតផល [apple](manufacturer) [notebook](category) ក្នុងតម្លៃ [1200](price) ដុល្លារទេ?
+
+  - intent: ask_product_above_price_kh
+    examples: |
+      - បង្ហាញខ្ញុំនូវកុំព្យូទ័រដែលមានតម្លៃខ្ពស់ជាង [1000 ដុល្លារ](price)
+      - រកកុំព្យូទ័រដែលមានតម្លៃខ្ពស់ជាង [500](price)
+      - ខ្ញុំចង់បានផលិតផលដែលមានតម្លៃខ្ពស់ជាង [700 ដុល្លារ](price)
+      - តើអ្នកអាចបង្ហាញខ្ញុំនូវផលិតផលដែលមានតម្លៃខ្ពស់ជាង [1500](price) បានទេ?
+      - បង្ហាញខ្ញុំនូវកុំព្យូទ័រយួរដៃដែលមានតម្លៃខ្ពស់ជាង [1200](price)
+      - រកខ្ញុំនូវផលិតផលដែលមានតម្លៃខ្ពស់ជាង [800](price)
+      - តើអ្នកអាចបង្ហាញខ្ញុំនូវកុំព្យូទ័រយួរដៃដែលមានតម្លៃខ្ពស់ជាង [1000 ដុល្លារ](price) បានទេ?
+      - តើអ្នកមានផលិតផលណាខ្លះដែលមានតម្លៃខ្ពស់ជាង [500](price)?
+      - តើអ្នកអាចរកអ្វីមួយដែលមានតម្លៃខ្ពស់ជាង [700 ដុល្លារ](price) សម្រាប់ខ្ញុំបានទេ?
+      - តើផលិតផលណាខ្លះដែលអាចទិញបានក្នុងតម្លៃខ្ពស់ជាង [1500](price)?
+      - តើខ្ញុំអាចទិញកុំព្យូទ័រយួរដៃដែលមានតម្លៃខ្ពស់ជាង [1200](price) បានទេ?
+      - បង្ហាញខ្ញុំនូវផលិតផលដែលមានតម្លៃខ្ពស់ជាង [800](price)
+      - រាយខ្ញុំនូវកុំព្យូទ័រដែលមានតម្លៃខ្ពស់ជាង [1000](price)
+      - រាយផលិតផលដែលមានតម្លៃខ្ពស់ជាង [500](price)
+      - ផ្តល់ឱ្យខ្ញុំនូវកុំព្យូទ័រយួរដៃដែលមានតម្លៃខ្ពស់ជាង [2000](price) ដុល្លារ
+      - កុំព្យូទ័រយួរដៃដែលមានតម្លៃខ្ពស់ជាង [1500](price) ដុល្លារ
+      - កុំព្យូទ័រដែលមានតម្លៃខ្ពស់ជាង [200.99](price) ដុល្លារ
+      - កុំព្យូទ័រយួរដៃ [Apple](manufacturer) ដែលមានតម្លៃខ្ពស់ជាង [200.99](price) ដុល្លារ
+      - កុំព្យូទ័រ [Apple](manufacturer) ដែលមានតម្លៃខ្ពស់ [2000.99](price) ដុល្លារ
+      - កុំព្យូទ័រយួរដៃ [HP](manufacturer) ដែលមានតម្លៃខ្ពស់ជាង [2000.99](price) ដុល្លារ
+      - តើអ្នកមានកុំព្យូទ័រយួរដៃ [Lenovo](manufacturer) ដែលមានតម្លៃខ្ពស់ជាង [1000.99](price) ទេ?
+      - តើអ្នកមានកុំព្យូទ័រ [Lenovo](manufacturer) ដែលមានតម្លៃខ្ពស់ជាង [1000.99](price) ដុល្លារទេ?
+      - កុំព្យូទ័រយួរដៃ [2 in 1 Convertible](category) ដែលមានតម្លៃខ្ពស់ជាង [1500](price) ដុល្លារ
+      - កុំព្យូទ័រយួរដៃ [2 in 1 Convertible](category) ដែលមានតម្លៃខ្ពស់ជាង [200.99](price) ដុល្លារ
+      - កុំព្យូទ័រ [Notebook](category) ដែលមានតម្លៃខ្ពស់ជាង [200.99](price) ដុល្លារ
+      - កុំព្យូទ័រយួរដៃ [Ultrabook](category) ដែលមានតម្លៃខ្ពស់ [2000.99](price) ដុល្លារ
+      - កុំព្យូទ័រ [Ultrabook](category) ដែលមានតម្លៃខ្ពស់ជាង [2000.99](price) ដុល្លារ
+      - តើអ្នកមានកុំព្យូទ័រយួរដៃ [notebook](category) ដែលមានតម្លៃខ្ពស់ជាង [1000.99](price) ទេ?
+      - តើអ្នកមានកុំព្យូទ័រ [ultrabook](category) ដែលមានតម្លៃខ្ពស់ជាង [1000.99](price) ដុល្លារទេ?
+      - កុំព្យូទ័រយួរដៃ [Apple](manufacturer) [notebook](category) ដែលមានតម្លៃខ្ពស់ជាង [200.99](price) ដុល្លារ
+      - កុំព្យូទ័រយួរដៃ [Apple](manufacturer) [notebook](category) ដែលមានតម្លៃខ្ពស់ [2000.99](price) ដុល្លារ
+      - កុំព្យូទ័រ [HP](manufacturer) [Notebook](category) ដែលមានតម្លៃខ្ពស់ជាង [2000.99](price) ដុល្លារ
+      - តើអ្នកមានកុំព្យូទ័រយួរដៃ [Lenovo](manufacturer) [Ultrabook](category) ដែលមានតម្លៃខ្ពស់ជាង [1000.99](price) ទេ?
+      - តើអ្នកមានកុំព្យូទ័រ [Lenovo](manufacturer) [ultrabook](category) ដែលមានតម្លៃខ្ពស់ជាង [1000.99](price) ដុល្លារទេ?
+
+  - intent: ask_product_below_price_kh
+    examples: |
+      - បង្ហាញខ្ញុំនូវកុំព្យូទ័រយួរដៃដែលមានតម្លៃទាបជាង [1000 ដុល្លារ](price)
+      - តើខ្ញុំអាចទិញអ្វីបានក្នុងតម្លៃទាបជាង [300](price)?
+      - តើអ្នកអាចបង្ហាញខ្ញុំនូវអ្វីមួយដែលមានតម្លៃទាបជាង [200](price) បានទេ?
+      - ខ្ញុំចង់បាន [Ultrabook](category) ក្នុងតម្លៃប្រហែល [800](price)
+      - តើមានផលិតផលណាខ្លះដែលមានតម្លៃទាបជាង [1200 ដុល្លារ](price)?
+      - រកផលិតផលដែលមានតម្លៃទាបជាង [400](price)
+      - ខ្ញុំកំពុងរកអ្វីមួយក្នុងថវិកា [150](price)។ តើអ្នកមានអ្វីខ្លះ?
+      - តើខ្ញុំអាចទិញកុំព្យូទ័រយួរដៃណាខ្លះដែលមានតម្លៃទាបជាង [1000 ដុល្លារ](price)?
+      - តើមានកុំព្យូទ័រយួរដៃណាខ្លះដែលអាចទិញបានក្នុងតម្លៃ [500](price)?
+      - តើខ្ញុំអាចទិញអ្វីបានជាមួយនឹងថវិកា [300](price)?
+      - បង្ហាញខ្ញុំនូវផលិតផលដែលមានតម្លៃទាបជាង [200](price) សូម
+      - តើអ្នកអាចរកកុំព្យូទ័រយួរដៃសម្រាប់ខ្ញុំក្នុងតម្លៃប្រហែល [800](price) បានទេ?
+      - តើមានផលិតផលណាខ្លះដែលអាចទិញបានក្នុងតម្លៃទាបជាង [1200 ដុល្លារ](price)?
+      - តើអ្នកអាចបង្ហាញខ្ញុំនូវផលិតផលដែលមានតម្លៃទាបជាង [400](price) បានទេ?
+      - ខ្ញុំកំពុងរកអ្វីមួយក្នុងថវិកា [150](price)។ តើអ្នកមានអ្វីខ្លះ?
+      - តើអ្នកមានកុំព្យូទ័រយួរដៃដែលមានតម្លៃទាបជាង [2000](price) ដុល្លារទេ?
+      - កុំព្យូទ័រយួរដៃដែលមានតម្លៃទាបជាង [1500](price) ដុល្លារ
+      - កុំព្យូទ័រដែលមានតម្លៃទាបជាង [200.99](price) ដុល្លារ
+      - កុំព្យូទ័រយួរដៃ [Apple](manufacturer) ដែលមានតម្លៃទាបជាង [200.99](price) ដុល្លារ
+      - កុំព្យូទ័រ [Apple](manufacturer) ដែលមានតម្លៃទាបជាង [2000.99](price) ដុល្លារ
+      - កុំព្យូទ័រយួរដៃ [HP](manufacturer) ដែលមានតម្លៃទាបជាង [2000.99](price) ដុល្លារ
+      - តើអ្នកមានកុំព្យូទ័រយួរដៃ [Lenovo](manufacturer) ដែលមានតម្លៃទាបជាង [1000.99](price) ទេ?
+      - តើអ្នកមានកុំព្យូទ័រយួរដៃ [Lenovo](manufacturer) ដែលមានតម្លៃទាបជាង [1000.99](price) ដុល្លារទេ?
+      - កុំព្យូទ័រ [2 in 1 Convertible](category) ដែលមានតម្លៃទាបជាង [1500](price) ដុល្លារ
+      - កុំព្យូទ័រយួរដៃ [2 in 1 Convertible](category) ដែលមានតម្លៃទាបជាង [200.99](price) ដុល្លារ
+      - កុំព្យូទ័រ [Notebook](category) ដែលមានតម្លៃទាបជាង [200.99](price) ដុល្លារ
+      - កុំព្យូទ័រ [Ultrabook](category) ដែលមានតម្លៃទាប [2000.99](price) ដុល្លារ
+      - កុំព្យូទ័រយួរដៃ [Ultrabook](category) ដែលមានតម្លៃទាបជាង [2000.99](price) ដុល្លារ
+      - តើអ្នកមានកុំព្យូទ័រយួរដៃ [notebook](category) ដែលមានតម្លៃទាបជាង [1000.99](price) ទេ?
+      - តើអ្នកមានកុំព្យូទ័រ [ultrabook](category) ដែលមានតម្លៃទាបជាង [1000.99](price) ដុល្លារទេ?
+      - កុំព្យូទ័រយួរដៃ [Apple](manufacturer) [notebook](category) ដែលមានតម្លៃទាបជាង [200.99](price) ដុល្លារ
+      - កុំព្យូទ័រ [Apple](manufacturer) [notebook](category) ដែលមានតម្លៃទាប [2000.99](price) ដុល្លារ
+      - កុំព្យូទ័រយួរដៃ [HP](manufacturer) [Notebook](category) ដែលមានតម្លៃទាបជាង [2000.99](price) ដុល្លារ
+      - តើអ្នកមានកុំព្យូទ័រ [Lenovo](manufacturer) [Ultrabook](category) ដែលមានតម្លៃទាបជាង [1000.99](price) ទេ?
+      - តើអ្នកមានកុំព្យូទ័រយួរដៃ [Lenovo](manufacturer) [ultrabook](category) ដែលមានតម្លៃទាបជាង [1000.99](price) ដុល្លារទេ?
+
+  - intent: ask_product_between_prices_kh
+    examples: |
+      - ម៉ាក [Apple](manufacturer) ក្នុងចន្លោះ 2200 ដល់ 3000 ដុល្លារ
+      - ផលិតផលចាប់ពី [500](min_price) ដល់ [1000](max_price)?
+      - ផលិតផលពី [200](min_price) ដល់ [400](max_price)?
+      - ជួរតម្លៃចាប់ពី [50](min_price) ដល់ [100](max_price)?
+      - ជម្រើសចាប់ពី [300](min_price) ដល់ [700](max_price)?
+      - តើមានជម្រើសអ្វីខ្លះក្នុងជួរតម្លៃពី [1000](min_price) ដល់ [1500](max_price)?
+      - បង្ហាញខ្ញុំនូវផលិតផលដែលមានតម្លៃពី [500](min_price) ដល់ [1000](max_price)
+      - ខ្ញុំចង់បានផលិតផលក្នុងជួរតម្លៃពី [300](min_price) ដល់ [800](max_price)
+      - រកផលិតផលដែលមានតម្លៃពី [1000](min_price) ដល់ [1500](max_price)
+      - បង្ហាញផលិតផលក្នុងជួរតម្លៃពី [200](min_price) ដល់ [400](max_price)
+      - ខ្ញុំចង់បានផលិតផលដែលមានតម្លៃពី [600](min_price) ដល់ [1200](max_price)
+      - បង្ហាញខ្ញុំនូវផលិតផលពី [100](min_price) ដល់ [500](max_price)
+      - ខ្ញុំកំពុងរកអ្វីមួយក្នុងជួរតម្លៃពី [150](min_price) ដល់ [400](max_price)
+      - តើមានជម្រើសអ្វីខ្លះដែលអាចទិញបានក្នុងជួរតម្លៃពី [1000](min_price) ដល់ [1500](max_price)?
+      - តើអ្នកអាចបង្ហាញខ្ញុំនូវផលិតផលដែលមានតម្លៃពី [500](min_price) ដល់ [1000](max_price) បានទេ?
+      - តើខ្ញុំអាចរកផលិតផលដែលមានតម្លៃពី [300](min_price) ដល់ [800](max_price) បានទេ?
+      - តើអ្នកមានផលិតផលណាខ្លះក្នុងជួរតម្លៃពី [1000](min_price) ដល់ [1500](max_price) ទេ?
+      - តើមានផលិតផលណាខ្លះដែលអាចទិញបានក្នុងជួរតម្លៃពី [200](min_price) ដល់ [400](max_price)?
+      - តើអ្នកមានជម្រើសអ្វីខ្លះក្នុងជួរតម្លៃពី [600](min_price) ដល់ [1200](max_price)?
+      - តើអ្នកអាចបង្ហាញខ្ញុំនូវផលិតផលពី [100](min_price) ដល់ [500](max_price) បានទេ?
+      - ខ្ញុំកំពុងរកផលិតផលដែលមានតម្លៃពី [150](min_price) ដល់ [400](max_price)។ តើអ្នកណែនាំអ្វីខ្លះ?
+      - ក្នុងជួរតម្លៃពី [1000](min_price) ដល់ [2000](max_price) ដុល្លារ?
+      - តើមាន [Apple](manufacturer) អ្វីខ្លះក្នុងជួរតម្លៃពី [1000](min_price) ដល់ [1500](max_price)?
+      - បង្ហាញខ្ញុំនូវ [Apple](manufacturer) ដែលមានតម្លៃពី [500](min_price) ដល់ [1000](max_price)
+      - ខ្ញុំចង់បានផលិតផល [Apple](manufacturer) ក្នុងជួរតម្លៃពី [300](min_price) ដល់ [800](max_price)
+      - រកផលិតផល [Lenovo](manufacturer) ដែលមានតម្លៃពី [1000](min_price) ដល់ [1500](max_price)
+      - បង្ហាញផលិតផល [HP](manufacturer) ក្នុងជួរតម្លៃពី [200](min_price) ដល់ [400](max_price)
+      - ខ្ញុំចង់បានកុំព្យូទ័រយួរដៃ [Apple](manufacturer) ដែលមានតម្លៃពី [600](min_price) ដល់ [1200](max_price)
+      - បង្ហាញខ្ញុំនូវកុំព្យូទ័រយួរដៃ [Asus](manufacturer) ពី [100](min_price) ដល់ [500](max_price)
+      - កុំព្យូទ័រយួរដៃ [Acer](manufacturer) ដែលមានតម្លៃពី [600](min_price) ដល់ [1200](max_price)
+      - ផ្តល់ឱ្យខ្ញុំនូវកុំព្យូទ័រយួរដៃ [Asus](manufacturer) ពី [100](min_price) ដល់ [500](max_price)
+      - រាយកុំព្យូទ័រយួរដៃ [Acer](manufacturer) ដែលមានតម្លៃពី [600](min_price) ដល់ [1200](max_price)
+      - បង្ហាញខ្ញុំនូវកុំព្យូទ័រយួរដៃ [MSI](manufacturer) ពី [100](min_price) ដល់ [500](max_price)
+      - [Apple](manufacturer) ពី [1000](min_price) ដុល្លារដល់ [2000](max_price) ដុល្លារ
+      - តើមាន [notebook](category) អ្វីខ្លះក្នុងជួរតម្លៃពី [1000](min_price) ដល់ [1500](max_price)?
+      - បង្ហាញខ្ញុំនូវ [ultrabook](category) ដែលមានតម្លៃពី [500](min_price) ដល់ [1000](max_price)
+      - ខ្ញុំចង់បានផលិតផល [notebook](category) ក្នុងជួរតម្លៃពី [300](min_price) ដល់ [800](max_price)
+      - រកផលិតផល [notebook](category) ដែលមានតម្លៃពី [1000](min_price) ដល់ [1500](max_price)
+      - បង្ហាញផលិតផល [ultrabook](category) ក្នុងជួរតម្លៃពី [200](min_price) ដល់ [400](max_price)
+      - ខ្ញុំចង់បានកុំព្យូទ័រយួរដៃ [notebook](category) ដែលមានតម្លៃពី [600](min_price) ដល់ [1200](max_price)
+      - បង្ហាញខ្ញុំនូវកុំព្យូទ័រយួរដៃ [notebook](category) ពី [100](min_price) ដល់ [500](max_price)
+      - កុំព្យូទ័រយួរដៃ [2 in 1 Convertible](category) ដែលមានតម្លៃពី [600](min_price) ដល់ [1200](max_price)
+      - ផ្តល់ឱ្យខ្ញុំនូវកុំព្យូទ័រយួរដៃ [2 in 1 Convertible](category) ពី [100](min_price) ដល់ [500](max_price)
+      - រាយកុំព្យូទ័រយួរដៃ [ultrabook](category) ដែលមានតម្លៃពី [600](min_price) ដល់ [1200](max_price)
+      - បង្ហាញខ្ញុំនូវកុំព្យូទ័រយួរដៃ [notebook](category) ពី [100](min_price) ដល់ [500](max_price)
+      - តើមាន [Apple](manufacturer) [notebook](category) អ្វីខ្លះក្នុងជួរតម្លៃពី [1000](min_price) ដល់ [1500](max_price)?
+      - បង្ហាញខ្ញុំនូវ [Apple](manufacturer) [notebook](category) ដែលមានតម្លៃពី [500](min_price) ដល់ [1000](max_price)
+      - ខ្ញុំចង់បានផលិតផល [Apple](manufacturer) [notebook](category) ក្នុងជួរតម្លៃពី [300](min_price) ដល់ [800](max_price)
+      - រកផលិតផល [Lenovo](manufacturer) [ultrabook](category) ដែលមានតម្លៃពី [1000](min_price) ដល់ [1500](max_price)
+      - បង្ហាញផលិតផល [HP](manufacturer) [ultrabook](category) ក្នុងជួរតម្លៃពី [200](min_price) ដល់ [400](max_price)
+      - ខ្ញុំចង់បាន [Apple](manufacturer) [notebook](category) ដែលមានតម្លៃពី [600](min_price) ដល់ [1200](max_price)
+      - បង្ហាញខ្ញុំនូវ [Asus](manufacturer) [notebook](category) ពី [100](min_price) ដល់ [500](max_price)
+      - [Acer](manufacturer) [notebook](category) ដែលមានតម្លៃពី [600](min_price) ដល់ [1200](max_price)
+      - ផ្តល់ឱ្យខ្ញុំនូវ [Asus](manufacturer) [ultrabook](category) ពី [100](min_price) ដល់ [500](max_price)
+      - រាយ [Acer](manufacturer) [notebook](category) ដែលមានតម្លៃពី [600](min_price) ដល់ [1200](max_price)
+      - បង្ហាញខ្ញុំនូវ [MSI](manufacturer) [ultrabook](category) ពី [100](min_price) ដល់ [500](max_price)
+      
+  - intent: ask_product_by_category_kh
+    examples: |
+      - កុំព្យូទ័រ [Gaming](category)
+      - ផលិតផល [Gaming](category)
+      - បង្ហាញខ្ញុំនូវ [Gaming](category) នៅក្នុងហាងរបស់អ្នក
+      - តើមាន [tablets](category) យ៉ាងដូចម្តេចដែលអ្នកមាន?
+      - ខ្ញុំត្រូវការកុំព្យូទ័រ [gaming laptop](category)
+      - រកឃើញផលិតផល [Gaming](category) ដូចគ្នាឲ្យខ្ញុំ
+      - តើមាន [2 in 1 Convertible](category) អ្វីខ្លះដែលអ្នកមាន?
+      - បង្ហាញខ្ញុំនូវ [Gaming](category)
+      - ខ្ញុំកំពុងស្វែងរក [Gaming](category)
+      - តើមាន [2 in 1 Convertible](category) អ្វីខ្លះដែលអ្នកមាន?
+      - តើមាន [desktops](category) ឬអត់?
+      - បង្ហាញខ្ញុំនូវ [Ultrabook](category)
+      - តើមាន [gaming](category) អ្វីដែលអ្នកណែនាំ?
+      - បង្ហាញខ្ញុំនូវជម្រើស [Notebook](category)
+      - ខ្ញុំចង់មើលទាំងអស់នៃ [Notebook](category) របស់អ្នក
+      - តើមានឧបករណ៍ [Notebook](category) អ្វីខ្លះដែលមាននៅក្នុងស្តុក?
+      - ខ្ញុំត្រូវការបrowse ជម្រើស [Gaming](category) របស់អ្នក
+      - តើមាន [Gaming](category) ដែលពេញនិយមបំផុតដែលអ្នកលក់ទេ?
+      - បង្ហាញខ្ញុំនូវ [2 in 1 Convertible](category) ថ្មីបំផុត
+      - តើមាន [2 in 1 Convertible](category) អ្វីខ្លះដែលអ្នកមាន?
+      - ខ្ញុំចាប់អារម្មណ៍លើ [Notebook](category) របស់អ្នក
+      - តើមាន [Gaming](category) អ្វីដែលអ្នកណែនាំ?
+
+  - intent: ask_product_by_manufacturer_kh
+    examples: |
+      - កុំព្យូទ័រ [Apple](manufacturer)
+      - ផលិតផល [Apple](manufacturer)
+      - រកឃើញផលិតផលដែលផលិតដោយ [Acer](manufacturer)
+      - តើមានផលិតផល [HP](manufacturer) អ្វីខ្លះ?
+      - ខ្ញុំកំពុងស្វែងរកកុំព្យូទ័រ [Lenovo](manufacturer)
+      - តើអ្នកអាចបង្ហាញផលិតផល [Asus](manufacturer) បានទេ?
+      - រកឃើញកុំព្យូទ័រ [Microsoft](manufacturer)
+      - តើមានផលិតផលពី [Acer](manufacturer) អ្វីខ្លះ?
+      - បង្ហាញខ្ញុំនូវអង្គធាតុពី [Razer](manufacturer)
+      - ខ្ញុំចង់បានផលិតផលពី [MSI](manufacturer)
+      - តើមានអ្វីពី [Razer](manufacturer)?
+      - តើផលិតផល [HP](manufacturer) យ៉ាងដូចម្តេច?
+      - មានម៉ូដែល [HP](manufacturer) ណាមួយនៅក្នុងហាងទេ?
+      - បង្ហាញខ្ញុំនូវផលិតផលម៉ាក [Lenovo](manufacturer)
+      - តើមានអ្វីពី [Asus](manufacturer)?
+      - បញ្ជីផលិតផល [Dell](manufacturer) ដែលមាននៅស្តុក?
+      - មានផលិតផល [Dell](manufacturer) ទេ?
+      - ត្រូវការផលិតផល [HP](manufacturer)
+      - កំពុងស្វែងរក [HP](manufacturer)
+      - មាន [Razer](manufacturer) ទេ?
+      - តើមានកុំព្យូទ័រ [Dell](manufacturer) នៅស្តុកទេ?
+      - ផលិតផល [Asus](manufacturer) មាននៅទីនេះទេ?
+      - ផលិតផល [Microsoft](manufacturer)?
+      - កុំព្យូទ័រ [Lenovo](manufacturer)?
+      - ត្រូវការផលិតផល [HP](manufacturer)
+      - [Asus](manufacturer) នៅស្តុកទេ?
+      - មាន [Dell](manufacturer) នៅទីនេះទេ?

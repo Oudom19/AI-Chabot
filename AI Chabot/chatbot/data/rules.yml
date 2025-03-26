@@ -14,24 +14,48 @@ rules:
 # PUBLIC
 - rule: respond to who are you
   steps:
-    - intent: ask_who_are_you
-    - action: utter_who_are_you
+  - intent: ask_who_are_you
+  - action: utter_who_are_you
 
 - rule: respond to who developed you
   steps:
-    - intent: ask_who_develop_you
-    - action: utter_who_develop_you
+  - intent: ask_who_develop_you
+  - action: utter_who_develop_you
 
 - rule: respond with thank from the user
   steps:
-    - intent: thank
-    - action: utter_thank
+  - intent: thank
+  - action: utter_thank
 
-- rule: Check Manufacturer and Category
-  condition:
-    - slot_was_set:
-        - manufacturer
-    - slot_was_set:
-        - category
+#Khmer Language Rules
+- rule: respond greet in khmer lanugage
   steps:
-    - action: action_check_manufacturer_category
+    - intent: greet_kh
+    - action: utter_greet_kh
+
+- rule: Say goodbye anytime the user says goodbye in khmer lanugage
+  steps:
+  - intent: goodbye_kh
+  - action: utter_goodbye_kh
+
+- rule: Say 'I am a bot' anytime the user challenges in khmer lanugage
+  steps:
+  - intent: bot_challenge_kh
+  - action: utter_who_are_you_kh
+
+- rule: respond to who are you in khmer lanugage
+  steps:
+  - intent: ask_who_are_you_kh
+  - action: utter_who_are_you_kh
+
+- rule: respond to who developed you in khmer lanugage
+  steps:
+  - intent: ask_who_develop_you_kh
+  - action: utter_who_develop_you_kh
+
+- rule: respond with thank from the user in khmer lanugage
+  steps:
+  - intent: thank_kh
+  - action: utter_thank_kh
+
+

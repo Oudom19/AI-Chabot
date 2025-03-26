@@ -10,14 +10,13 @@ intents:
   - bot_challenge
   - ask_who_are_you
   - ask_who_develop_you
-
-  # PRIVATE
   - ask_list
   - ask_manufacturer_products
   - ask_category_products
   - ask_model_name_details
   - ask_product_by_manufacturer_and_category
   - ask_product_by_name
+  - ask_product_by_common_name
   - ask_product_price
   - ask_product_exact_price
   - ask_product_above_price
@@ -25,6 +24,29 @@ intents:
   - ask_product_between_prices
   - ask_product_by_category
   - ask_product_by_manufacturer
+#Khmer Language
+  - greet_kh
+  - goodbye_kh
+  - affirm_kh
+  - deny_kh
+  - thank_kh
+  - bot_challenge_kh
+  - ask_who_are_you_kh
+  - ask_who_develop_you_kh
+  - ask_list_kh
+  - ask_manufacturer_products_kh
+  - ask_category_products_kh
+  - ask_model_name_details_kh
+  - ask_product_by_manufacturer_and_category_kh
+  - ask_product_by_name_kh
+  - ask_product_by_common_name_kh
+  - ask_product_price_kh
+  - ask_product_exact_price_kh
+  - ask_product_above_price_kh
+  - ask_product_below_price_kh
+  - ask_product_between_prices_kh
+  - ask_product_by_category_kh
+  - ask_product_by_manufacturer_kh
 
 responses:
   utter_start:
@@ -76,6 +98,10 @@ responses:
     - text: "Goodbye! If you have any more questions in the future or need assistance, feel free to reach out. Take care!"
     - text: "Alright, take care! 👋😊"
 
+  utter_see_u_again:
+    - text: "Goodbye, thank you for reaching us!"
+    - text: "Bye bye, thank you for texting us!"
+
   utter_who_are_you:
     - text: |
         I am the official virtual assistant of ECI, here to assist you in navigating the digital tools and services provided by the Store.
@@ -84,6 +110,60 @@ responses:
     - text: |
         This bot is developed by ECI Distribution Company.
 
+#Khmer Language
+  utter_greet_kh:
+    - text: "សួស្តី! សូមស្វាគមន៍មកកាន់ ECI Bot។ តើខ្ញុំអាចជួយអ្នកបានយ៉ាងដូចម្តេចថ្ងៃនេះ?"
+    - text: "សួស្តី! សូមស្វាគមន៍មកកាន់ ECI Bot។ តើអ្នកកំពុងស្វែងរកព័ត៌មានអំពីផលិតផលរបស់យើងថ្ងៃនេះដែរឬទេ?"
+    - text: "សួស្តី! សូមស្វាគមន៍មកកាន់ ECI Bot។ តើអ្នកចង់ស្វែងរកផលិតផលរបស់យើងដែរឬទេ?"
+    - text: "សូមស្វាគមន៍! សូមស្វាគមន៍មកកាន់ ECI Bot។ តើអ្នកចាប់អារម្មណ៍លើផលិតផលចុងក្រោយរបស់យើងដែរឬទេ?"
+    - text: "សួស្តី! សូមស្វាគមន៍មកកាន់ ECI Bot។ តើអ្នកចង់ដឹងបន្ថែមអំពីផលិតផលដែលយើងមានដែរឬទេ?"
+    - text: "ជំរាបសួរ! សូមស្វាគមន៍មកកាន់ ECI Bot។ តើអ្នកត្រូវការព័ត៌មានលម្អិតអំពីផលិតផលរបស់យើងដែរឬទេ?"
+    - text: "សួស្តី! សូមស្វាគមន៍មកកាន់ ECI Bot។ តើអ្នកកំពុងស្វែងរកព័ត៌មានជាក់លាក់អំពីផលិតផលថ្ងៃនេះដែរឬទេ?"
+
+  utter_ask_list_kh:
+    - text: "តើអ្នកចង់មើលបញ្ជីរបស់យើងដែរឬទេ?"
+    - text: "តើអ្នកចង់ស្វែងរកបញ្ជីផលិតផលរបស់យើងដែរឬទេ?"
+    - text: "តើអ្នកចាប់អារម្មណ៍លើបញ្ជីផលិតផលដែលយើងមានដែរឬទេ?"
+    - text: "តើអ្នកចង់មើលបញ្ជីផលិតផលរបស់យើងដែរឬទេ?"
+    - text: "តើអ្នកចង់មើលបញ្ជីពេញលេញរបស់យើងដែរឬទេ?"
+    - text: "តើអ្នកចាប់អារម្មណ៍លើការស្វែងរកបញ្ជីផលិតផលរបស់យើងដែរឬទេ?"
+
+  utter_ask_for_products_kh:
+    - text: "សូមផ្តល់ព័ត៌មានអំពីផលិតផលដែលអ្នកចង់ដឹង!"
+    - text: "សូមប្រាប់ខ្ញុំអំពីផលិតផលដែលអ្នកចង់ស្វែងរក!"
+    - text: "សូមផ្តល់ព័ត៌មានលម្អិតអំពីផលិតផលដែលអ្នកចង់មើល!"
+
+  utter_ask_products_kh:
+    - text: "តើអ្នកចង់បានផលិតផលជាក់លាក់ណាមួយដែរឬទេ?"
+    - text: "តើអ្នកមានផលិតផលណាមួយក្នុងចិត្តដែរឬទេ?"
+    - text: "តើអ្នកកំពុងគិតអំពីផលិតផលជាក់លាក់ណាមួយដែរឬទេ?"
+    - text: "តើមានផលិតផលជាក់លាក់ណាមួយដែលអ្នកកំពុងស្វែងរកដែរឬទេ?"
+    - text: "តើអ្នកមានផលិតផលណាមួយក្នុងចិត្តដែរឬទេ?"
+
+  utter_thank_kh:
+  - text: "មិនអីទេ! តើមានអ្វីផ្សេងទៀតដែលខ្ញុំអាចជួយអ្នកបានទេ?"
+  - text: "រីករាយដែលអាចជួយបាន! កំុភ្លេចខ្ញុំបើអ្នកមានសំណួរផ្សេងទៀត។"
+  - text: "រីករាយដែលអាចជួយបាន! តើមានអ្វីផ្សេងទៀតដែលអ្នកចង់ដឹងទេ?"
+  - text: "មិនមានបញ្ហាអ្វីទេ។ ខ្ញុំនៅទីនេះប្រសិនបើអ្នកត្រូវការព័ត៌មានបន្ថែម។"
+  - text: "មិនអីទេ! ខ្ញុំរីករាយដែលអាចជួយបាន។ តើមានអ្វីផ្សេងទៀតដែលអ្នកចង់ដឹងទេ?"
+  - text: "គ្រប់ពេលវេលា! ការពេញចិត្តរបស់អ្នកគឺជាអាទិភាពរបស់យើង។ តើខ្ញុំអាចជួយអ្នកបានអ្វីទៀតថ្ងៃនេះ?"
+  - text: "វាជាកិត្តិយសរបស់ខ្ញុំ! សូមស្វែងរកយើងគ្រប់ពេលដែលអ្នកមានសំណួរអំពីផលិតផលរបស់យើង។"
+  - text: "ខ្ញុំរីករាយដែលអាចជួយបាន។ តើមានអ្វីផ្សេងទៀតដែលអ្នកចង់ដឹងទេ?"
+
+  utter_goodbye_kh:
+  - text: "លាហើយ! ប្រសិនបើអ្នកមានសំណួរណាមួយទៀតនាពេលអនាគត ឬត្រូវការជំនួយ សូមកំុភ្លេចទាក់ទងមកយើងខ្ញុំ។ ថែរក្សាខ្លួនឱ្យបានល្អ!"
+  - text: "ល្អហើយ កំុភ្លេចថែរក្សាខ្លួនឱ្យបានល្អ! 👋😊"
+
+  utter_see_u_again_kh:
+    - text: "ជំរាបលា!​ អរគុណសម្រាប់ការចូលមើល និងសួរព័ត៌មាន។"
+    - text: "ជំរាបលា!​ អរគុណសម្រាប់ការសួរព័ត៌មាន។"
+
+  utter_who_are_you_kh:
+  - text: "ខ្ញុំគឺជាជំនួយការប្រតិបត្តិការសំរាប់អ្នកប្រើប្រាស់របស់ ECI ដែលត្រូវបានបង្កើតឡើងដើម្បីជួយអ្នកក្នុងការប្រើប្រាស់ឧបករណ៍ និងសេវាកម្មឌីជីថលដែលផ្តល់ដោយហាង។"
+
+  utter_who_develop_you_kh:
+  - text: "Bot នេះត្រូវបានអភិវឌ្ឍន៍ដោយក្រុមហ៊ុន ECI Distribution។"
+
 actions:
   - action_check_manufacturer
   - action_check_category
@@ -91,6 +171,7 @@ actions:
   - action_check_manufacturer_category
   - action_list
   - action_fetch_product_by_name
+  - action_fetch_product_by_common_name
   - action_provide_product_price
   - action_fetch_product_at_exact_price
   - action_fetch_product_above_price
@@ -98,9 +179,26 @@ actions:
   - action_fetch_product_between_prices
   - action_fetch_product_by_category
   - action_fetch_product_by_manufacturer
+#Khmer Language
+  - action_check_manufacturer_kh
+  - action_check_category_kh
+  - action_check_model_kh
+  - action_check_manufacturer_category_kh
+  - action_list_kh
+  - action_fetch_product_by_name_kh
+  - action_fetch_product_by_common_name_kh
+  - action_provide_product_price_kh
+  - action_fetch_product_at_exact_price_kh
+  - action_fetch_product_above_price_kh
+  - action_fetch_product_below_price_kh
+  - action_fetch_product_between_prices_kh
+  - action_fetch_product_by_category_kh
+  - action_fetch_product_by_manufacturer_kh
+
 
 entities:
   - model_name
+  - common_name
   - cpu
   - ram
   - storage
@@ -116,6 +214,11 @@ slots:
     mappings:
       - type: from_entity
         entity: model_name
+  common_name:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: common_name
   cpu:
     type: text
     mappings:

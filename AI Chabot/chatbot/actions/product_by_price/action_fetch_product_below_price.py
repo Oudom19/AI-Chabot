@@ -163,11 +163,11 @@ class ActionFetchProductBelowPrice(Action):
                 response = intro_message
                 for product in products:
                     response += (
-                        f"\n■ {product['model_name']}\n"
+                        f"\n■ Model: {product['model_name']}\n"
                         f"○ Manufacturer: {product['manufacturer']}\n"
                         f"○ Price: ${product['price']:.2f}\n"
                         f"○ Category: {product['category']}\n"
-                        f"○ Specifications: {product['cpu']}, {product['ram']} RAM\n"
+                        f"○ Specifications: {product['cpu']} - {product['ram']} RAM\n"
                         f"○ Storage: {product['storage']}\n"
                     )
                 dispatcher.utter_message(text=response)

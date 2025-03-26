@@ -304,7 +304,6 @@ nlu:
     - Brands you carry?
     - Show me options
     - What's available?
-    - Companies?
     - Which ones?
     - Makers?
     - List em all
@@ -437,7 +436,7 @@ nlu:
     - Tell me about the [MacBook Pro](model_name)
     - I'm looking for a  [Dell](manufacturer) [Inspiron 3567](model_name)
     - What is the [Acer](manufacturer) [Swift 3](model_name) like?
-    - I want the [Asus](manufacturer)[ZenBook UX430UN](model_name)
+    - I want the [Asus](manufacturer) [ZenBook UX430UN](model_name)
     - Find me a [Acer](manufacturer) [Aspire 3](model_name)    
     - I need the [Dell](manufacturer) [XPS 13](model_name).
     - Do you have the [HP](manufacturer) [250 G6](model_name)?
@@ -484,6 +483,79 @@ nlu:
     - Can I get a [MacBook Air](model_name) [Laptop](category) from [Apple](manufacturer) with an [M2 Chip](cpu)?
     - Do you sell [MacBook Air](model_name) with [16GB](ram) RAM?
 
+- intent: ask_product_by_common_name
+  examples: |
+    - Any [ROG](common_name)?
+    - Details of product [MacBook](common_name)
+    - Product details [MacBook](common_name)
+    - Details of laptop [MacBook](common_name)
+    - Laptop details [MacBook](common_name)
+    - I want to know the details of this product [MacBook](common_name)
+    - Tell me the details of this product [MacBook](common_name)
+    - Details of this product [MacBook](common_name)
+    - Check if you have a [Apple](manufacturer) [Macbook](common_name) that is a [ultrabook](category) and cpu [Intel Core i7 2.7GHz](cpu)?
+    - Show me a [HP](manufacturer) [ProBook](common_name) that is a [notebook](category) and cpu [Intel Core i5 7200U 2.5GHz](cpu)?
+    - Check if you have a [Apple](manufacturer) [Macbook](common_name) with cpu [Intel Core i7 2.7GHz](cpu)?
+    - Show me a [HP](manufacturer) [ProBook](common_name) with cpu [Intel Core i5 7200U 2.5GHz](cpu)?
+    - Show me the [Inspiron](common_name) with [4GB](ram) and [256GB SSD](storage) SSD.
+    - Find me the [Inspiron](common_name) with [4gb](ram) and [256gb](storage) SSD.
+    - I need a [Lenovo](manufacturer) [Legion](common_name) with [8GB](ram) and [128GB SSD + 1TB HDD](storage).
+    - Can you find the [Lenovo](manufacturer) [Legion](common_name) with [8GB](ram) and [128GB SSD + 1TB HDD](storage)?
+    - Do you have the [MacBook](common_name) with [8GB](ram) and [128GB SSD](storage) SSD?
+    - Do you have the [MacBook](common_name) with [8GB](ram) and [128GB SSD](storage)?
+    - I’m looking for the [MacBook](common_name) with [16GB](ram).
+    - I  want [MacBook](common_name) with [8GB](ram).
+    - Any details on the [EliteBook](common_name) from [HP](manufacturer)?
+    - I need to know about the [Precision](common_name) from [Dell](manufacturer)
+    - Show me the [Dell](manufacturer) [Inspiron](common_name) model
+    - Can you find a [IdeaPad](common_name)?
+    - Tell me about the [MacBook](common_name)
+    - I'm looking for a  [Dell](manufacturer) [Inspiron](common_name)
+    - What is the [Acer](manufacturer) [Swift](common_name) like?
+    - I want the [Asus](manufacturer) [ZenBook](common_name)
+    - Find me a [Acer](manufacturer) [Aspire](common_name)    
+    - I need the [Dell](manufacturer) [XPS](common_name).
+    - Find me the [Asus](manufacturer) [Vivobook](common_name).
+    - Show me the  [Dell](manufacturer) [Inspiron](common_name).
+    - Find me the [Lenovo](manufacturer) [IdeaPad](common_name).
+    - Do you have the [Asus](manufacturer) [ROG](common_name)?
+    - Can you find the [Acer](manufacturer) [Aspire](common_name)?
+    - I’m looking for the [Asus](manufacturer) [ROG](common_name).
+    - I'm looking for a [MacBook](common_name)
+    - Show me [Apple](manufacturer) [MacBook](common_name) with [Intel Core i7](cpu)
+    - Find me a [MacBook](common_name) with [16GB](ram) RAM and [512GB](storage) SSD
+    - I want a [MacBook](common_name) with [Intel Core i5](cpu) and [256GB](storage) storage
+    - About [MacBook](common_name) with [16GB](ram) RAM and [512GB](storage) SSD
+    - So about [MacBook](common_name) with [Intel Core i5](cpu) and [256GB](storage) storage
+    - Anything similar [MacBook](common_name) with [Intel Core i5](cpu) and [256GB](storage) storage
+    - A [MacBook](common_name) with [16GB](ram) RAM and [512GB](storage) SSD
+    - An [Aspire](common_name) with [AMD A9-Series 9420 3GHz](cpu) and [500GB HDD](storage) storage
+    - You have a [HP](manufacturer) [ProBook](common_name) that is a [Notebook](category) and cpu [Intel Core i5 7200U 2.5GHz](cpu)?
+    - U got a [Apple](manufacturer) [Macbook](common_name) that is a [Ultrabook](category) and cpu [Intel Core i7 2.7GHz](cpu)?
+    - Do you have a [HP](manufacturer) [ProBook](common_name) that is a [Notebook](category) and cpu [Intel Core i5 7200U 2.5GHz](cpu)?
+    - Do you got a [Apple](manufacturer) [Macbook](common_name) that is a [Ultrabook](category) and cpu [Intel Core i7 2.7GHz](cpu)?
+    - Can you check if you have a [Apple](manufacturer) [Macbook](common_name) that is a [ultrabook](category) and cpu [Intel Core i7 2.7GHz](cpu)?
+    - Do you have a [Apple](manufacturer) [Macbook](common_name) that is a [Ultrabook](category) and cpu [Intel Core i7 2.7GHz](cpu)?
+    - Can you check if you have a [Apple](manufacturer) [Macbook](common_name) with cpu [Intel Core i7 2.7GHz](cpu)?
+    - Do you have a [Apple](manufacturer) [Macbook](common_name) with cpu [Intel Core i7 2.7GHz](cpu)?
+    - Do you got a [Apple](manufacturer) [Macbook](common_name) with cpu [Intel Core i7 2.7GHz](cpu)?
+    - Do you have a [HP](manufacturer) [ProBook](common_name) with cpu [Intel Core i5 7200U 2.5GHz](cpu)?
+    - Do you have a [MacBook](common_name) with [8GB](ram) RAM?
+    - Is the [MacBook](common_name) from [Apple](manufacturer) available in [Laptops](category)?
+    - Do you have the [ThinkPad](common_name) from [Lenovo](manufacturer) in the [Business Laptop](category) section?
+    - Can I get a [ROG Zephyrus](common_name) [Gaming Laptop](category) from [Asus](manufacturer)?
+    - Is the [XPS](common_name) available with an [Intel i7](cpu)?
+    - Do you offer the [Spectre](common_name) with [16GB RAM](ram)?
+    - Can I buy a [MacBook](common_name) with [M3 Chip](cpu) from your store?
+    - Is the [Microsoft Surface](common_name) available in the [Touchscreen Laptop](category) category?
+    - Do you have a [Razer Blade](common_name) [Gaming Laptop](category) with [32GB RAM](ram)?
+    - Does the [Swift](common_name) come with an [Intel i5](cpu)?
+    - Can I find the [Alienware](common_name) from [Dell](manufacturer) in the [Gaming Laptop](category) section?
+    - Do you have the [MacBook](common_name) from [Apple](manufacturer) in the [Laptop](category) category?
+    - Is the [MacBook](common_name) available from [Apple](manufacturer) under [Laptop](category)?
+    - Can I get a [MacBook](common_name) [Laptop](category) from [Apple](manufacturer) with an [M2 Chip](cpu)?
+    - Do you sell [MacBook](common_name) with [16GB](ram) RAM?
+
 - intent: ask_product_price
   examples: |
     - Laptop [Inspiron 3567](model_name) price
@@ -527,9 +599,9 @@ nlu:
     - What’s the current price of [MacBook Pro](model_name)?
     - How much do I need to pay for [Aspire 3](model_name)?
     - What’s the cost of [Inspiron 3567](model_name)?
-    - Can you give me the latest price of[Inspiron 3567](model_name)?
+    - Can you give me the latest price of [Inspiron 3567](model_name)?
     - How much is [Inspiron 3567](model_name)?
-    - What is the price range for[MacBook Pro](model_name)?
+    - What is the price range for [MacBook Pro](model_name)?
     - How much does [MacBook Pro](model_name) cost in dollars?
     - What’s the price of the [MacBook Pro](model_name) in your store?
     - Can you tell me the cost of [MacBook Pro](model_name) right now?
