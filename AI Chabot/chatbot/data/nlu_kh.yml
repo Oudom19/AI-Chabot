@@ -306,7 +306,7 @@ nlu:
       - មាន​ [MacBook](common_name) ឬអត់?
       - សុំ [MacBook](common_name)
       - ចុះ [MacBook](common_name) 
-      - ចំណែក [Lenovo](manufacturer) [Legion](common_name)
+        - ចំណែក [Lenovo](manufacturer) [Legion](common_name)
       - ចំណែកឯ [MacBook](common_name) ជាមួយ [8GB](ram) និង [128GB SSD](storage) ទេ?
       - រីឯ [EliteBook](common_name)
       - ព័ត៌មានអំពីផលិតផល [MacBook](common_name)
@@ -521,10 +521,10 @@ nlu:
 
   - intent: ask_product_above_price_kh
     examples: |
-      - តម្លៃលើ[1000.00](price)$
-      - ចុះតម្លៃលើ [1000.00](price)$
-      - ចំណែកតម្លៃលើ [1000.00](price)$
-      - ចំណែកឯតម្លៃលើស [1000.00](price)$
+      - តម្លៃខ្ពស់ជាង [1000.00](price)$
+      - ចុះតម្លៃលើស [1000.00](price) $
+      - ចំណែកតម្លៃច្រើនជាង [1000.00](price)$
+      - ចំណែកឯតម្លៃច្រើនជាង 1000.00](price)$
       - រីឯតម្លៃលើស [1000.00](price)$
       - បង្ហាញខ្ញុំនូវកុំព្យូទ័រដែលមានតម្លៃខ្ពស់ជាង [1000 ដុល្លារ](price)
       - រកកុំព្យូទ័រដែលមានតម្លៃខ្ពស់ជាង [500](price)
@@ -693,7 +693,6 @@ nlu:
       - បង្ហាញខ្ញុំនូវ [2 in 1 Convertible](category) ថ្មីបំផុត
       - តើមាន [2 in 1 Convertible](category) អ្វីខ្លះដែលអ្នកមាន?
       - ខ្ញុំចាប់អារម្មណ៍លើ [Notebook](category) របស់អ្នក
-      - តើមាន[Gaming](category) អ្វីដែលអ្នកណែនាំ?
 
   - intent: ask_product_by_manufacturer_kh
     examples: |
