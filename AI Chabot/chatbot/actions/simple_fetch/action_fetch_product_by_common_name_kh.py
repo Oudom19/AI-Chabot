@@ -75,7 +75,7 @@ class ActionFetchProduct(Action):
 
                 if products:
                     if len(products) == 1:
-                        intro_kh, intro_en = random.choice(intros)
+                        intro_kh = random.choice(intros)
                         dispatcher.utter_message(text=intro_kh)
                     else:
                         multi_intros = [
