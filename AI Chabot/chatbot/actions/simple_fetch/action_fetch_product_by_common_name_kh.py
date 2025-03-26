@@ -77,15 +77,13 @@ class ActionFetchProduct(Action):
                     if len(products) == 1:
                         intro_kh, intro_en = random.choice(intros)
                         dispatcher.utter_message(text=intro_kh)
-                        dispatcher.utter_message(text=intro_en)
                     else:
                         multi_intros = [
                             f"ខ្ញុំបានរកឃើញ {len(products)} ជម្រើសដែលត្រូវនឹងលក្ខណៈរបស់អ្នក៖",
                             f"នេះជាផលិតផល {len(products)} ដែលត្រូវនឹងតម្រូវការរបស់អ្នក៖",
                         ]
-                        intro_kh, intro_en = random.choice(multi_intros)
+                        intro_kh = random.choice(multi_intros)
                         dispatcher.utter_message(text=intro_kh)
-                        dispatcher.utter_message(text=intro_en)
 
                     for product in products:
                         if product['image_url']:
