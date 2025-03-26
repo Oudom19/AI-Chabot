@@ -4,6 +4,7 @@ nlu:
     examples: |
       - ជំរាបសួរ
       - សួស្តី
+      - ហាយ
       - ជំរាបសួរបង
       - សួស្តីបង
       - ជំរាបសួរប្អូន
@@ -220,6 +221,10 @@ nlu:
       - មាន​ [MacBook Air](model_name) ទេ?
       - មាន​ [MacBook Air](model_name) ឬអត់?
       - សុំ [MacBook Air](model_name)
+      - ចុះ [MacBook Air](model_name)
+      - ចំណែក [HP](manufacturer) [250 G6](model_name)
+      - ចំណែកឯ [MacBook Pro](model_name) ជាមួយ [8GB](ram) និង [128GB SSD](storage) ទេ?
+      - រីឯ [IdeaPad 320-15IKB](model_name) 
       - ព័ត៌មានអំពីផលិតផល [MacBook Air](model_name)
       - ព័ត៌មានផលិតផល [MacBook Air](model_name)
       - ព័ត៌មានអំពីកុំព្យូទ័រយួរដៃ [MacBook Air](model_name)
@@ -300,6 +305,10 @@ nlu:
       - មាន​ [MacBook](common_name) ទេ?
       - មាន​ [MacBook](common_name) ឬអត់?
       - សុំ [MacBook](common_name)
+      - ចុះ [MacBook](common_name) 
+      - ចំណែក [Lenovo](manufacturer) [Legion](common_name)
+      - ចំណែកឯ [MacBook](common_name) ជាមួយ [8GB](ram) និង [128GB SSD](storage) ទេ?
+      - រីឯ [EliteBook](common_name)
       - ព័ត៌មានអំពីផលិតផល [MacBook](common_name)
       - ព័ត៌មានផលិតផល [MacBook](common_name)
       - ព័ត៌មានអំពីកុំព្យូទ័រយួរដៃ [MacBook](common_name)
@@ -377,6 +386,10 @@ nlu:
       - តម្លៃកុំព្យូទ័រយួរដៃ [Inspiron 3567](model_name)
       - តម្លៃ [Inspiron 3567](model_name)
       - តម្លៃរបស់ [Inspiron 3567](model_name)
+      - ចុះតម្លៃរបស់ [Inspiron 3567](model_name)
+      - ចំណែកតម្លៃ [Inspiron 3567](model_name)
+      - ចំណែកឯតម្លៃ [Inspiron 3567](model_name)
+      - រីឯតម្លៃ [Inspiron 3567](model_name)
       - តើ [Inspiron 3567](model_name) ជាមួយ [Intel Core i3 6006U 2GHz](cpu), [4GB](ram) និង [256GB SSD](storage) SSD មានតម្លៃប៉ុន្មាន?
       - រកតម្លៃ [Inspiron 3567](model_name) ជាមួយ [Intel Core i3 6006U 2GHz](cpu), [4gb](ram) និង [256gb](storage) SSD
       - ប្រាប់ខ្ញុំពីតម្លៃនៃ [Legion Y520-15IKBN](model_name) ជាមួយ [Intel Core i5 7300HQ 2.5GHz](cpu), [8GB](ram) និង [128GB SSD + 1TB HDD](storage)
@@ -429,6 +442,11 @@ nlu:
   - intent: ask_product_exact_price_kh
     examples: |
       - កុំព្យូទ័រ [1000.00](price)$
+      - តម្លៃ [1000.00](price)$
+      - ចុះតម្លៃ [1000.00](price)$
+      - ចំណែកតម្លៃ [1000.00](price)$
+      - ចំណែកឯតម្លៃ [1000.00](price)$
+      - រីឯតម្លៃ [1000.00](price)$
       - កុំព្យូទ័រយួរដៃ [1000.00](price) ដុល្លារ
       - ផលិតផល [1000.00](price)$
       - ផលិតផល [1000.00](price) ដុល្លារ
@@ -503,6 +521,11 @@ nlu:
 
   - intent: ask_product_above_price_kh
     examples: |
+      - តម្លៃលើ[1000.00](price)$
+      - ចុះតម្លៃលើ [1000.00](price)$
+      - ចំណែកតម្លៃលើ [1000.00](price)$
+      - ចំណែកឯតម្លៃលើស [1000.00](price)$
+      - រីឯតម្លៃលើស [1000.00](price)$
       - បង្ហាញខ្ញុំនូវកុំព្យូទ័រដែលមានតម្លៃខ្ពស់ជាង [1000 ដុល្លារ](price)
       - រកកុំព្យូទ័រដែលមានតម្លៃខ្ពស់ជាង [500](price)
       - ខ្ញុំចង់បានផលិតផលដែលមានតម្លៃខ្ពស់ជាង [700 ដុល្លារ](price)
@@ -540,6 +563,10 @@ nlu:
 
   - intent: ask_product_below_price_kh
     examples: |
+      - ចុះក្រោម [1000 ដុល្លារ](price)
+      - ចំណែកក្រោម [1000 ដុល្លារ](price)
+      - ចំណែកឯក្រោម [1000 ដុល្លារ](price)
+      - រីឯក្រោម [1000 ដុល្លារ](price)
       - បង្ហាញខ្ញុំនូវកុំព្យូទ័រយួរដៃដែលមានតម្លៃទាបជាង [1000 ដុល្លារ](price)
       - តើខ្ញុំអាចទិញអ្វីបានក្នុងតម្លៃទាបជាង [300](price)?
       - តើអ្នកអាចបង្ហាញខ្ញុំនូវអ្វីមួយដែលមានតម្លៃទាបជាង [200](price) បានទេ?
@@ -578,7 +605,11 @@ nlu:
 
   - intent: ask_product_between_prices_kh
     examples: |
-      - ម៉ាក [Apple](manufacturer) ក្នុងចន្លោះ 2200 ដល់ 3000 ដុល្លារ
+      - ចុះចន្លោះ [500](min_price) ដល់ [1000](max_price) ដុល្លារ
+      - ចំណែកចន្លោះពី [500](min_price) ដល់ [1000](max_price) ដុល្លារ
+      - ចំណែកឯចន្លោះចាប់ពី [500](min_price) ដល់ [1000](max_price) ដុល្លារ
+      - រីឯក្រោមចន្លោះ [500](min_price) ដល់ [1000](max_price) ដុល្លារ
+      - ម៉ាក [Apple](manufacturer) ក្នុងចន្លោះ [500](min_price) ដល់ [1000](max_price) ដុល្លារ
       - ផលិតផលចាប់ពី [500](min_price) ដល់ [1000](max_price)?
       - ផលិតផលពី [200](min_price) ដល់ [400](max_price)?
       - ជួរតម្លៃចាប់ពី [50](min_price) ដល់ [100](max_price)?
@@ -637,6 +668,10 @@ nlu:
       
   - intent: ask_product_by_category_kh
     examples: |
+      - ចុះ [Gaming](category)
+      - ចំណែក [Gaming](category)
+      - ចំណែកឯ [2 in 1 Convertible](category)
+      - រីឯ [2 in 1 Convertible](category)
       - កុំព្យូទ័រ [Gaming](category)
       - ផលិតផល [Gaming](category)
       - បង្ហាញខ្ញុំនូវ [Gaming](category) នៅក្នុងហាងរបស់អ្នក
@@ -658,10 +693,14 @@ nlu:
       - បង្ហាញខ្ញុំនូវ [2 in 1 Convertible](category) ថ្មីបំផុត
       - តើមាន [2 in 1 Convertible](category) អ្វីខ្លះដែលអ្នកមាន?
       - ខ្ញុំចាប់អារម្មណ៍លើ [Notebook](category) របស់អ្នក
-      - តើមាន [Gaming](category) អ្វីដែលអ្នកណែនាំ?
+      - តើមាន[Gaming](category) អ្វីដែលអ្នកណែនាំ?
 
   - intent: ask_product_by_manufacturer_kh
     examples: |
+      - ចុះ [Apple](manufacturer)
+      - ចំណែក [Apple](manufacturer)
+      - ចំណែកឯ [Acer](manufacturer)
+      - រីឯ [Acer](manufacturer)
       - កុំព្យូទ័រ [Apple](manufacturer)
       - ផលិតផល [Apple](manufacturer)
       - រកឃើញផលិតផលដែលផលិតដោយ [Acer](manufacturer)
