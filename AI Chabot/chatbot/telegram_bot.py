@@ -10,7 +10,7 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 # Replace with your Telegram Bot token
-TELEGRAM_TOKEN = "7673859545:AAEzn8jl8536pFp0J8mdvpw2U41mdg0wcLk"
+TELEGRAM_TOKEN = "telegram_token"
 
 # Rasa server URL
 RASA_API_URL = "http://localhost:5005/webhooks/rest/webhook"
